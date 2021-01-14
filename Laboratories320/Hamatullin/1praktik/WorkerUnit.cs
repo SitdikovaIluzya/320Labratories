@@ -16,7 +16,7 @@ namespace Laboratories320.Hamatullin._1praktik
 
         public void Carry(Unit unit)
         {
-            Console.WriteLine($"{Name} тащит {unit.Name}");
+            Console.WriteLine($"{Name} тащит {unit.Name} в укрытие");
         }
 
         public void Move()

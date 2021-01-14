@@ -14,9 +14,17 @@ namespace Laboratories320.Hamatullin._1praktik
 
         public int Speed { get; set; }
 
-        public void Carry()
+        public void Carry(Unit unit)
         {
-            throw new NotImplementedException();
+            if (unit.Hp < 20)
+            {
+                Console.WriteLine($"{Name} тащит {unit.Name} в укрытие");
+            }
+            else
+            {
+                Console.WriteLine($"{Name} тащит {unit.Name}");
+            }
+            
         }
 
         public void Move()
@@ -24,9 +32,5 @@ namespace Laboratories320.Hamatullin._1praktik
             throw new NotImplementedException();
         }
 
-        public void Move(Unit unit)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

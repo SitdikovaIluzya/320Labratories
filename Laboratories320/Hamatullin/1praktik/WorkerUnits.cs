@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class WorkerUnits
+    abstract class WorkerUnits
     {
     }
 }

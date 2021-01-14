@@ -4,7 +4,17 @@ using System.Text;
 
 namespace Laboratories320.Dyubanov.StrategyGame
 {
-    class Unit
+    public abstract class Unit
     {
+        public string Name;
+        public int Health;
+        public int Protection;
+
+        public Unit(string UnitName, int UnitHealth, int UnitProtection)
+        {
+            Name = UnitName;
+            Health = UnitHealth;
+            Protection = UnitProtection;
+        }
     }
 }

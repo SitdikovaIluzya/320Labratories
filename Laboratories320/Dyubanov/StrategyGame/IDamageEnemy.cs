@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Dyubanov.StrategyGame
 {
-    interface Interface1
+    interface IDamageEnemy
     {
+        void DamageEnemy(Unit enemy);
     }
 }

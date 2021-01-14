@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratories320.Dyubanov.StrategyGame;
+using System;
 
 namespace Laboratories320
 {
@@ -6,8 +7,11 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leave hope behind all who enters here");
-            Console.WriteLine();
+            Atacker att1 = new Atacker("att1", 50, 80);
+            Atacker att2 = new Atacker("att2", 70, 80);
+
+            att1.SendMessage();
+            att1.DamageEnemy(att2);
         }
     }
 }

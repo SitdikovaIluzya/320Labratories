@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Dyubanov.StrategyGame
 {
-    interface IPower
+    interface IAddPower
     {
-        public int Power { get; set; }
+        void AddPower(IPower teammate);
     }
 }

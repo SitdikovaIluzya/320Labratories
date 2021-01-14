@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Dyubanov.StrategyGame
 {
-    interface IPower
+    interface IRepairBuild
     {
-        public int Power { get; set; }
+        void RepairBuild(Unit build);
     }
 }

@@ -10,7 +10,7 @@ namespace Laboratories320.Dyubanov.StrategyGame
         {
         }
 
-        public int Power => 10;
+        public int Power { get => 50; set => throw new NotImplementedException(); }
 
         public void HealTeammate(Unit teammate)
         {

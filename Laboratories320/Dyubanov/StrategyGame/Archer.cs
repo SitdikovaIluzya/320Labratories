@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Laboratories320.Dyubanov.StrategyGame
 {
-    class Defender : Unit, IDamageEnemy, IMove, IPower, ISendMessage
+    class Archer : Unit, IDamageEnemy, IMove, IPower, ISendMessage
     {
-        public Defender(string UnitName, int UnitHealth, int UnitProtection) : base(UnitName, UnitHealth, UnitProtection)
-        {
+        public Archer(string UnitName, int UnitHealth, int UnitProtection) : base(UnitName, UnitHealth, UnitProtection)
+        { 
         }
-
-        public int Power { get => 10; set => throw new NotImplementedException(); }
+        public int Power { get => 25; set => throw new NotImplementedException(); }
 
         public void DamageEnemy(Unit enemy)
         {
-            enemy.Health -= this.Power; 
+            enemy.Health = enemy.Health - (this.Power - (enemy.Protection / 2));
+            Console.WriteLine(enemy.Health);
         }
 
         public void Move()
@@ -29,3 +29,5 @@ namespace Laboratories320.Dyubanov.StrategyGame
         }
     }
 }
+    
+

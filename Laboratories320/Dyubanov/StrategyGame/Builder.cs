@@ -4,23 +4,22 @@ using System.Text;
 
 namespace Laboratories320.Dyubanov.StrategyGame
 {
-    class Atacker : Unit, IDamageEnemy, IMove, IPower, ISendMessage
+    class Builder : Unit, IPower, IMove, ISendMessage, IRepairBuild
     {
-        public Atacker(string UnitName, int UnitHealth, int UnitProtection) : base(UnitName, UnitHealth, UnitProtection)
+        public Builder(string UnitName, int UnitHealth, int UnitProtection) : base(UnitName, UnitHealth, UnitProtection)
         {
         }
 
         public int Power { get => 50; set => throw new NotImplementedException(); }
 
-        public void DamageEnemy(Unit enemy)
-        {
-            enemy.Health = enemy.Health - (this.Power - (enemy.Protection / 5));
-            Console.WriteLine(enemy.Health);
-        }
-
         public void Move()
         {
             Console.WriteLine(this.Name + ": Moving");
+        }
+
+        public void RepairBuild(Unit build)
+        {
+            build.Health += this.Power;
             throw new NotImplementedException();
         }
 

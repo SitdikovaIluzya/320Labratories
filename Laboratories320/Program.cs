@@ -6,7 +6,7 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leave hope behind all who enters here...");
+            Console.WriteLine("Начало 1 практики, мой первый коммит");
             Console.WriteLine();
         }
     }

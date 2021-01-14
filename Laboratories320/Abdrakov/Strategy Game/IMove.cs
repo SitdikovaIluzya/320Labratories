@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game
 {
-    interface ILocation
+    interface IMove
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public void Move(int dx, int dy);
     }
 }

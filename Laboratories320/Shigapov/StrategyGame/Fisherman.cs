@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    interface ITeleport
+    class Fisherman : Unit// Рыбак
     {
-        void Teleport();
+        public override int Health { get; set; } = 120;
     }
 }

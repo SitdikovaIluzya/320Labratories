@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    interface IHeal
+    interface IKill
     {
-        void Heal();
+        void Kill();
     }
 }

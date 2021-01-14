@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    abstract class Unit
+    abstract class Unit: IKill
     {
+        public abstract int Health { get; set; }
+        public void Kill()
+        {
+            Health = 0;
+        }
     }
 }

@@ -6,6 +6,7 @@ namespace Laboratories320.Shigapov.StrategyGame
 {
     interface IAttack
     {
+        public int Damage { get; }
         void Attack();
     }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    interface IHeal
+    class Gardener : Unit// Садовод
     {
-        void Heal();
+        public override int Health { get; set; } = 100;
     }
 }

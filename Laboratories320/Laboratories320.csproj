@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Hamatullin\" />
+    <Folder Include="Hamatullin\1praktik\" />
   </ItemGroup>
 
 </Project>

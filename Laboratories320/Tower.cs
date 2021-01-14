@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Tower
+    class Tower : Building
     {
     }
 }

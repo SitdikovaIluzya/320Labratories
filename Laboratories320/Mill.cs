@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Mill
+    class Mill : Building
     {
     }
 }

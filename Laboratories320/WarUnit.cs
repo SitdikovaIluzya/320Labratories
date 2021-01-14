@@ -6,5 +6,6 @@ namespace Laboratories320
 {
     class WarUnit
     {
+
     }
 }

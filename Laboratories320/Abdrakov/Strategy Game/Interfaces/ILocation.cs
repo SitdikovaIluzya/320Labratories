@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game
 {
-    interface IAttack
+    interface ILocation
     {
-        public void Attack(Unit target, int damage);
+        public int X { get; }
+        public int Y { get; }
     }
 }

@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game
 {
-    interface ILocation
+    interface IHealth
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public int health { get; }
+
+        public void ChangeHealth(int deltaHealth);
     }
 }

@@ -6,6 +6,9 @@ namespace Laboratories320.Abdrakov.Strategy_Game
 {
     interface IAttack
     {
-        public void Attack(Unit target, int damage, int attackRange);
+        public int attackRange { get; }
+        public int damage { get; }
+
+        public void Attack(Unit target);
     }
 }

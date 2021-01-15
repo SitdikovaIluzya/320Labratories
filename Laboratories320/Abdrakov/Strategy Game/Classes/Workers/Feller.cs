@@ -3,24 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Laboratories320.Abdrakov.Strategy_Game.Classes.WarUnits
+namespace Laboratories320.Abdrakov.Strategy_Game.Classes.Workers
 {
-    class Knight : Unit, IMove, IAttack, IArmor, IObservancy
+    // Лесоруб
+    class Feller : Unit, IMove, IAttack, IObservancy
     {
         public override int X { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
         public override int Y { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
         public override int health { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
-        public int armor { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
         public int attackRange { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
         public int damage { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
         public int observancy { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }
 
         public void Attack(Unit target)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ChangeArmor(int deltaArmor)
         {
             throw new NotImplementedException();
         }

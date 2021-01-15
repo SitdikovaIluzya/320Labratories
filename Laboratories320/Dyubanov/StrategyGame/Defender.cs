@@ -14,7 +14,8 @@ namespace Laboratories320.Dyubanov.StrategyGame
 
         public void DamageEnemy(Unit enemy)
         {
-            enemy.Health -= this.Power; 
+            enemy.Health -= this.Power;
+            Console.WriteLine(enemy.Health <= 0 ? enemy.Name + ": Dead" : enemy.Name + ": Got damage " + this.Power);
         }
 
         public void Move()

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Laboratories320.Dyubanov.StrategyGame
 {
-    class Atacker : Unit, IDamageEnemy, IMove, IPower, ISendMessage
+    class Attacker : Unit, IDamageEnemy, IMove, IPower, ISendMessage
     {
-        public Atacker(string UnitName, int UnitHealth, int UnitProtection) : base(UnitName, UnitHealth, UnitProtection)
+        public Attacker(string UnitName, int UnitHealth, int UnitProtection) : base(UnitName, UnitHealth, UnitProtection)
         {
         }
         
@@ -15,7 +15,7 @@ namespace Laboratories320.Dyubanov.StrategyGame
         public void DamageEnemy(Unit enemy)
         {
             enemy.Health = enemy.Health - (this.Power - (enemy.Protection / 5));
-            Console.WriteLine(enemy.Health);
+            Console.WriteLine(enemy.Health <= 0? enemy.Name + ": Dead" : enemy.Name + ": Got damage " + (this.Power - (enemy.Protection / 5)));
         }
 
         public void Move()

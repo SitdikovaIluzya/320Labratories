@@ -30,6 +30,11 @@ namespace Laboratories320.Abdrakov.Strategy_Game.Classes
             throw new NotImplementedException();
         }
 
+        public override void Destruct()
+        {
+            throw new NotImplementedException();
+        }
+
         public bool SeeTheEnemy(Unit target)
         {
             throw new NotImplementedException();

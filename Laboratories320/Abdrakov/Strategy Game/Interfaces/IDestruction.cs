@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game.Interfaces
 {
-    // Броня
-    interface IArmor
+    // Смерть или разрушение
+    interface IDestruction 
     {
-        public int armor { get; }
-
-        public void ChangeArmor(int deltaArmor);
+        public void Destruct();
     }
 }

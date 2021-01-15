@@ -16,6 +16,11 @@ namespace Laboratories320.Abdrakov.Strategy_Game.Classes.Workers
             throw new NotImplementedException();
         }
 
+        public override void Destruct()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Move(int dx, int dy)
         {
             throw new NotImplementedException();

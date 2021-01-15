@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game
 {
+    // Атака
     interface IAttack
     {
         public int attackRange { get; }

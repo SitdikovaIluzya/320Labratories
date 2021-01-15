@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game.Interfaces
 {
-    // Броня
-    interface IArmor
+    // Лечение или исцеление
+    interface IHeal
     {
-        public int armor { get; }
+        public int healPower { get; }
 
-        public void ChangeArmor(int deltaArmor);
+        public void Heal(Unit target);
     }
 }

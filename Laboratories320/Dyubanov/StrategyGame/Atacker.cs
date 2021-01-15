@@ -9,7 +9,7 @@ namespace Laboratories320.Dyubanov.StrategyGame
         public Atacker(string UnitName, int UnitHealth, int UnitProtection) : base(UnitName, UnitHealth, UnitProtection)
         {
         }
-
+        
         public int Power { get => 50; set => throw new NotImplementedException(); }
 
         public void DamageEnemy(Unit enemy)

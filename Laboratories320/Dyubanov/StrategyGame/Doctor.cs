@@ -4,13 +4,19 @@ using System.Text;
 
 namespace Laboratories320.Dyubanov.StrategyGame
 {
-    class Doctor : Unit, IMove, IPower, ISendMessage, IHealTeammate
+    class Doctor : Unit, IMove, IPower, IAddMana, ISendMessage, IHealTeammate
     {
         public Doctor(string UnitName, int UnitHealth, int UnitProtection) : base(UnitName, UnitHealth, UnitProtection)
         {
         }
 
         public int Power { get => 50; set => throw new NotImplementedException(); }
+
+        public void AddMana(IMana teammate)
+        {
+            teammate.Mana += this.Power;
+            throw new NotImplementedException();
+        }
 
         public void HealTeammate(Unit teammate)
         {

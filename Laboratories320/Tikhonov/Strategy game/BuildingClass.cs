@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Tikhonov.Strategy_game
 {
-    abstract class Unit
+    public abstract class BuildingClass
     {
-
     }
 }

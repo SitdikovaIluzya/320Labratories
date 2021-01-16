@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320
 {
-    //атака для атакующих воинов
-    interface IAttack
+    abstract class Unit
     {
+        int Health;
     }
 }

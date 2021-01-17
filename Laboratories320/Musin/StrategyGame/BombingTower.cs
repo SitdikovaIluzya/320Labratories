@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Musin.StrategyGame
 {
-    abstract class WarUnit : Unit
+    class BombingTower : UnitBuilding
     {
+
     }
 }

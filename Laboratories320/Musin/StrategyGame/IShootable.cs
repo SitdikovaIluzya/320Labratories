@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Musin.StrategyGame
 {
-    abstract class WarUnit : Unit
+    interface IShootable
     {
     }
 }

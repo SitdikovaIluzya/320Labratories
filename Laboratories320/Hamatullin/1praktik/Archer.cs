@@ -5,13 +5,13 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class Archer : WarUnit,IRechargable
+    class Archer : WarUnit, IRechargable
     {
         public int Ammunition { get; set; } = 50;
         public int Range { get; } = 10;
         public int Damage { get; set; }
 
-        public Archer(string Name,int Hp,int Speed, int Armor,int Damage) : base (Name,Hp,Speed,Armor)
+        public Archer(string Name, int Hp, int Speed, int Armor, int Damage) : base(Name, Hp, Speed, Armor)
         {
             this.Damage = Damage;
         }
@@ -20,10 +20,9 @@ namespace Laboratories320.Hamatullin._1praktik
         {
             Ammunition -= 1;
             Console.WriteLine($"Выстрелил по {unit.Name} и нанес = {Damage}");
-            
+
             if (unit.Hp < Damage)
             {
-                unit.Hp = 0;
                 Unit.Destruction(unit);
             }
             else

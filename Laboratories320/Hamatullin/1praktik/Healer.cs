@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class Healer : WarUnit,IRefillableHeal
+    class Healer : WarUnit, IRefillableHeal
     {
         public int AmountHealingSubstances { get; set; } = 20;
 
-        public Healer(string Name, int Hp, int Speed, int Armor) : base (Name,Hp,Speed,Armor)
+        public Healer(string Name, int Hp, int Speed, int Armor) : base(Name, Hp, Speed, Armor)
         {
         }
 

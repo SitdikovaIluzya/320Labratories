@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    abstract class UnitBuilding : Unit,IConstructed
+    abstract class UnitBuilding : Unit
     {
-        public UnitBuilding(string Name,int Hp,int Width,int Length) : base (Name,Hp)
+        public int Width { get; set; }
+        public int Length { get; set; }
+
+        public UnitBuilding(string Name, int Hp, int Width, int Length) : base(Name, Hp)
         {
             this.Width = Width;
             this.Length = Length;
         }
-
-        public int Width { get; set; }
-        public int Length { get; set; }
     }
 }

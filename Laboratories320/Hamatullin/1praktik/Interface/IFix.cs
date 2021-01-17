@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik.Interface
 {
-    interface IReplenishing
+    interface IFix
     {
-        public int NumberMaterial { get; set; }
+        void RepairBuild(UnitBuilding unitBuilding);
     }
 }

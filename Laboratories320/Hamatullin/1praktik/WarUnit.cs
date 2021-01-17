@@ -15,7 +15,7 @@ namespace Laboratories320.Hamatullin._1praktik
             this.Armor = Armor;
         }
 
-        
+
 
         public void Carry(Unit unit)
         {
@@ -27,7 +27,7 @@ namespace Laboratories320.Hamatullin._1praktik
             {
                 Console.WriteLine($"{Name} тащит {unit.Name}");
             }
-            
+
         }
 
         public void Move()

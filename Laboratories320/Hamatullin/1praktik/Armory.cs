@@ -5,14 +5,12 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class Armory : UnitBuilding,IReplenishing
+    class Armory : UnitBuilding, IKeepable
     {
         public int NumberMaterial { get; set; } = 1000;
-        public Armory(string Name,int Hp,int Width,int Length) : base (Name,Hp,Width,Length)
+        public Armory(string Name, int Hp, int Width, int Length) : base(Name, Hp, Width, Length)
         {
-            
-        }
 
-        
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace Laboratories320.Hamatullin._1praktik
     abstract class Unit
     {
         public string Name { get; set; }
-        public int Hp 
+        public int Hp
         {
             get
             {

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    class Smith : Unit// Кузнец
+    interface IHeal
     {
-        public override int Health { get; set; } = 50;
+        void Heal(Unit u);
     }
 }

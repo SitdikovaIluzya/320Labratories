@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    class Barracks: Unit, IRecover //Казарма
+    class BuildingUnit : Unit, IRecover
     {
         public override int Health { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 

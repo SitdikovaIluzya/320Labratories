@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    interface IHeal
+    class Lighthouse : BuildingUnit //Маяк
     {
-        void Heal();
+         public int Light { get; set; }
     }
 }

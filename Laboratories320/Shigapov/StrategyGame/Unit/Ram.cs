@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    class Gardener : Unit// Садовод
+    class Ram : WarUnit //Таран
     {
-        public override int Health { get; set; } = 100;
+        public int Acceleration { get; set; }
     }
 }

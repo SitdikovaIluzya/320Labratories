@@ -4,13 +4,14 @@ using System.Text;
 
 namespace Laboratories320.Shigapov.StrategyGame
 {
-    class Lighthouse : Unit, IRecover //Маяк
+    class Hospital : BuildingUnit,IHeal
     {
         public override int Health { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public void Recover()
+        public void Heal(Unit u)
         {
             throw new NotImplementedException();
         }
+
     }
 }

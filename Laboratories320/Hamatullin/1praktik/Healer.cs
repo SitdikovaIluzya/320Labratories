@@ -35,7 +35,7 @@ namespace Laboratories320.Hamatullin._1praktik
         {
             if (hospital.NumberMaterial > 20)
             {
-                Console.WriteLine("Пополнение стрел");
+                Console.WriteLine("Пополнение лечащих веществ");
                 for (int i = 0; i < AmountHealingSubstances; i++)
                 {
                     AmountHealingSubstances += 1;
@@ -43,7 +43,7 @@ namespace Laboratories320.Hamatullin._1praktik
             }
             else
             {
-                Console.WriteLine($"Нехватка стрел в {hospital.Name}");
+                Console.WriteLine($"Нехватка лечащих веществ в {hospital.Name}");
             }
         }
     }

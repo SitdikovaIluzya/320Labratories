@@ -4,10 +4,9 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik.Interface
 {
-    interface IShootable
+    interface IRechargable
     {
-        int Range { get;}
-        void Shoot(Unit unit);
-        
+        int Ammunition { get; set; }
+        void ReplenishAmmunition(Armory armory);
     }
 }

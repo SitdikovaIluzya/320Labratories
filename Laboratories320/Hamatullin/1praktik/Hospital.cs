@@ -5,31 +5,21 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class Hospital : UnitBuilding,IHealeable
+    class Hospital : UnitBuilding,IHealeable,IReplenishing
     {
-        public int AmountHealingSubstances { get; set; }
-
-        public Hospital(string Name,int Hp,int Width,int Length,int AmountHealingSubstances) : base (Name,Hp,Width,Length)
+        public int NumberMaterial { get; set; } = 100;
+        public Hospital(string Name,int Hp,int Width,int Length) : base (Name,Hp,Width,Length)
         {
-            this.AmountHealingSubstances = AmountHealingSubstances;
+            
         }
-
         public void Heal(WarUnit warUnit)
         {
-            if (AmountHealingSubstances != 0)
-            {
-                AmountHealingSubstances -= 1;
                 warUnit.Hp += 100;
-            }
         }
 
         public void Heal(WorkerUnit workerUnit)
         {
-            if (AmountHealingSubstances != 0)
-            {
-                AmountHealingSubstances -= 1;
                 workerUnit.Hp += 100;
-            }
         }
     }
 }

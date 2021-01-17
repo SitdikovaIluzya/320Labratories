@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class Archer : WarUnit,IShootable,IToDamageble
+    class Archer : WarUnit,IShootable,IToDamageble,IRechargable
     {
         public int Ammunition { get; set; } = 50;
         public int Range { get; } = 10;
@@ -24,7 +24,7 @@ namespace Laboratories320.Hamatullin._1praktik
             if (unit.Hp < Damage)
             {
                 unit.Hp = 0;
-                Console.WriteLine($"{unit.Name} умер");
+                Unit.Destruction(unit);
             }
             else
             {
@@ -34,7 +34,7 @@ namespace Laboratories320.Hamatullin._1praktik
 
         public void ReplenishAmmunition(Armory armory)
         {
-            if (armory.NumberAmmunition > 50)
+            if (armory.NumberMaterial > 50)
             {
                 Console.WriteLine("Пополнение стрел");
                 for (int i = 0; i < Ammunition; i++)

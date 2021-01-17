@@ -4,10 +4,9 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik.Interface
 {
-    interface IShootable
+    interface IRefillableHeal
     {
-        int Range { get;}
-        void Shoot(Unit unit);
-        
+        int AmountHealingSubstances { get; set; }
+        void RefillHeal(Hospital hospital);
     }
 }

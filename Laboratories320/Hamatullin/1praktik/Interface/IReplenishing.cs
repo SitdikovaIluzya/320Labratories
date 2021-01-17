@@ -4,10 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik.Interface
 {
-    interface IShootable
+    interface IReplenishing
     {
-        int Range { get;}
-        void Shoot(Unit unit);
-        
+        public int NumberMaterial { get; set; }
     }
 }

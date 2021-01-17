@@ -5,13 +5,12 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class Healer : WarUnit,IHealeable
+    class Healer : WarUnit,IHealeable,IRefillableHeal
     {
-        public int AmountHealingSubstances { get; set; }
+        public int AmountHealingSubstances { get; set; } = 20;
 
-        public Healer(string Name, int Hp, int Speed, int Armor,int AmountHealingSubstances) : base (Name,Hp,Speed,Armor)
+        public Healer(string Name, int Hp, int Speed, int Armor) : base (Name,Hp,Speed,Armor)
         {
-            this.AmountHealingSubstances = AmountHealingSubstances;
         }
 
         public void Heal(WarUnit warUnit)
@@ -29,6 +28,22 @@ namespace Laboratories320.Hamatullin._1praktik
             {
                 AmountHealingSubstances -= 1;
                 workerUnit.Hp += 10;
+            }
+        }
+
+        public void RefillHeal(Hospital hospital)
+        {
+            if (hospital.NumberMaterial > 20)
+            {
+                Console.WriteLine("Пополнение стрел");
+                for (int i = 0; i < AmountHealingSubstances; i++)
+                {
+                    AmountHealingSubstances += 1;
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Нехватка стрел в {hospital.Name}");
             }
         }
     }

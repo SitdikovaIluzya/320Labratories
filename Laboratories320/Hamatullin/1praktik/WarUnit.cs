@@ -7,12 +7,15 @@ namespace Laboratories320.Hamatullin._1praktik
 {
     abstract class WarUnit : Unit, IMoveable
     {
-        public WarUnit(string Name, int Hp, int Speed) : base(Name, Hp)
+        public int Armor { get; set; }
+        public int Speed { get; set; }
+        public WarUnit(string Name, int Hp, int Speed, int Armor) : base(Name, Hp)
         {
             this.Speed = Speed;
+            this.Armor = Armor;
         }
 
-        public int Speed { get; set; }
+        
 
         public void Carry(Unit unit)
         {

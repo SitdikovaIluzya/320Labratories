@@ -6,6 +6,6 @@ namespace Laboratories320.Hamatullin._1praktik.Interface
 {
     interface IToDamageble
     {
-        int Damage { get;}
+        int Damage { get; set; }
     }
 }

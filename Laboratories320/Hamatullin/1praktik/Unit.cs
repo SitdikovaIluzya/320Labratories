@@ -7,24 +7,7 @@ namespace Laboratories320.Hamatullin._1praktik
     abstract class Unit
     {
         public string Name { get; set; }
-        public int Hp
-        {
-            get
-            {
-                return Hp;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    Hp = 0;
-                }
-                else
-                {
-                    Hp = value;
-                }
-            }
-        }
+        public int Hp { get; set; }
         public static void Destruction(Unit unit)
         {
             unit.Hp = 0;

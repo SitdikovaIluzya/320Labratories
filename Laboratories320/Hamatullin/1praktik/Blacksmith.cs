@@ -14,8 +14,16 @@ namespace Laboratories320.Hamatullin._1praktik
 
         public void Replenish(IKeepable keepable)
         {
-            keepable.NumberMaterial += 50;
-            Console.WriteLine("Пополнено на 50 материалов");
+            if(keepable is Armory)
+            {
+                keepable.NumberMaterial += 50;
+                Console.WriteLine("Пополнено на 50 материалов");
+            }
+            else
+            {
+                Console.WriteLine("Я не умею делать лечащие вещества");
+            }
+            
         }
     }
 }

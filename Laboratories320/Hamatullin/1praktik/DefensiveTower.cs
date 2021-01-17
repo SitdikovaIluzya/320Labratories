@@ -18,15 +18,29 @@ namespace Laboratories320.Hamatullin._1praktik
 
         public void Shoot(Unit unit)
         {
-            Console.WriteLine($"Выстрелил по {unit.Name} и нанес = {Damage}");
-
-            if (unit.Hp < Damage)
+            if (unit is WarUnit)
             {
-                Unit.Destruction(unit);
+                WarUnit warUnit = unit as WarUnit;
+                int DamageArmor = Damage - (warUnit.Armor / 10);
+                if (warUnit.Hp < DamageArmor)
+                {
+                    Destruction(warUnit);
+                }
+                else
+                {
+                    unit.Hp -= DamageArmor;
+                }
             }
             else
             {
-                unit.Hp -= Damage;
+                if (unit.Hp < Damage)
+                {
+                    Destruction(unit);
+                }
+                else
+                {
+                    unit.Hp -= Damage;
+                }
             }
         }
     }

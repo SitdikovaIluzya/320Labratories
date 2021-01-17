@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratories320.Hamatullin._1praktik;
+using System;
 
 namespace Laboratories320
 {
@@ -6,7 +7,7 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }

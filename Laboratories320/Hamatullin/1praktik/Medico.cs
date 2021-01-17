@@ -14,8 +14,15 @@ namespace Laboratories320.Hamatullin._1praktik
 
         public void Replenish(IKeepable keepable)
         {
-            keepable.NumberMaterial += 10;
-            Console.WriteLine("Пополнено на 10 материалов");
+            if(keepable is Hospital)
+            {
+                keepable.NumberMaterial += 10;
+                Console.WriteLine("Пополнено на 10 материалов");
+            }
+            else
+            {
+                Console.WriteLine("Я не умею делать материалы для стрелков");
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik.Interface
 {
-    interface IRefillableHeal
+    interface IRefillableHeal : IHealeable
     {
         int AmountHealingSubstances { get; set; }
         void RefillHeal(Hospital hospital);

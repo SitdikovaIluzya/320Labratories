@@ -4,10 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik.Interface
 {
-    interface IShootable : IToDamageble
+    interface IStrikeable : IToDamageble
     {
-        int Range { get;}
-        void Shoot(Unit unit);
-        
+        void Strike(Unit unit);
     }
 }

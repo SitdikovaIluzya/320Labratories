@@ -5,17 +5,16 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class DefensiveTower : UnitBuilding,IShootable
+    class Warrior : WarUnit,IStrikeable
     {
-        public DefensiveTower(string Name,int Hp,int Width,int Length,int Damage) : base (Name,Hp,Width,Length)
+        public int Damage { get; set; }
+
+        public Warrior(string Name,int Hp,int Speed, int Armor,int Damage) : base (Name, Hp, Speed, Armor)
         {
             this.Damage = Damage;
         }
 
-        public int Damage { get; set; }
-        public int Range { get; } = 20;
-
-        public void Shoot(Unit unit)
+        public void Strike(Unit unit)
         {
             Console.WriteLine($"Выстрелил по {unit.Name} и нанес = {Damage}");
 

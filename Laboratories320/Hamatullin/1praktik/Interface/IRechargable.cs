@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik.Interface
 {
-    interface IRechargable
+    interface IRechargable : IShootable
     {
         int Ammunition { get; set; }
         void ReplenishAmmunition(Armory armory);

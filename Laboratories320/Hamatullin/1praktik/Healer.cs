@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class Healer : WarUnit,IHealeable,IRefillableHeal
+    class Healer : WarUnit,IRefillableHeal
     {
         public int AmountHealingSubstances { get; set; } = 20;
 

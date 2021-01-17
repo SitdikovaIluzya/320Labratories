@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._1praktik
 {
-    class Archer : WarUnit,IShootable,IToDamageble,IRechargable
+    class Archer : WarUnit,IRechargable
     {
         public int Ammunition { get; set; } = 50;
         public int Range { get; } = 10;

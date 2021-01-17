@@ -29,7 +29,7 @@ namespace Laboratories320.Hamatullin._1praktik
 
         public void Move()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Ходит");
         }
 
     }

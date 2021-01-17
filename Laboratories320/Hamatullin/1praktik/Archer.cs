@@ -19,7 +19,7 @@ namespace Laboratories320.Hamatullin._1praktik
         public void Shoot(Unit unit)
         {
             Ammunition -= 1;
-            if(unit is WarUnit)
+            if (unit is WarUnit)
             {
                 WarUnit warUnit = unit as WarUnit;
                 int DamageArmor = Damage - (warUnit.Armor / 10);

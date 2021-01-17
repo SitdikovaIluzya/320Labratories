@@ -14,7 +14,7 @@ namespace Laboratories320.Hamatullin._1praktik
 
         public void Replenish(IKeepable keepable)
         {
-            if(keepable is Hospital)
+            if (keepable is Hospital)
             {
                 keepable.NumberMaterial += 10;
                 Console.WriteLine("Пополнено на 10 материалов");

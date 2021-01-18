@@ -6,5 +6,6 @@ namespace Laboratories320.Saifetdinov.Prak2
 {
     class Theading
     {
+        int[] arr;
     }
 }

@@ -1,13 +1,13 @@
 ﻿using System;
-
+using Laboratories320.Lab2;
 namespace Laboratories320
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leave hope behind all who enters here...");
-            Console.WriteLine();
+            Threading.MaxThread.Start();
+            //Threading.SumThread.Start();
         }
     }
 }

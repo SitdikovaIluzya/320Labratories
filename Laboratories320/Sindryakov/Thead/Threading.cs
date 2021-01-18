@@ -6,5 +6,6 @@ namespace Laboratories320.Sindryakov.Thead
 {
     class Threading
     {
+        int[] array;
     }
 }

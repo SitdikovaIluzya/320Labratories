@@ -4,7 +4,16 @@ using System.Text;
 
 namespace Laboratories320.Zakirov._1Praktika
 {
-    class Workshop //мастерская
+    class Workshop : UnitBuilding //мастерская
     {
+        public Workshop(string Name, int Health, int Level, int OccupiedSpace) : base(Name, Health, Level, OccupiedSpace)
+        {
+
+        }
+
+        public void MakeWeapon()
+        {
+            Console.WriteLine("Оружие изготовлено");
+        }
     }
 }

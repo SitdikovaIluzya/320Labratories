@@ -4,7 +4,25 @@ using System.Text;
 
 namespace Laboratories320.Zakirov._1Praktika
 {
-    class Barbarian //варвар
+    class Barbarian : WarUnit //варвар
     {
+        public int AmountResources { get; set; } //объем ресурсов, которых крадет варвар
+        public int DamageDone { get; set; } //нанесенный урон
+
+        public Barbarian(string Name, int Health, int AttackSpeed, int MovementSpeed, int Speed, int AmountResources, int DamageDone) : base(Name, Health, AttackSpeed, MovementSpeed, Speed)
+        {
+            this.AmountResources = AmountResources;
+            this.DamageDone = DamageDone;
+        }
+
+        public void Assault()
+        {
+            Console.WriteLine("Герой напал");
+        }
+
+        public void Destroy()
+        {
+            Console.WriteLine("Герой уничтожил");
+        }
     }
 }

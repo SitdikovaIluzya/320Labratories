@@ -6,5 +6,6 @@ namespace Laboratories320.Zakirov.Thread
 {
     class Threading
     {
+        public int[] number;
     }
 }

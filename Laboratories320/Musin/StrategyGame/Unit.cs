@@ -4,9 +4,13 @@ using System.Text;
 
 namespace Laboratories320.Musin.StrategyGame
 {
-    abstract class Unit
+    abstract class Unit : IDestroyable
     {
         public abstract int Health { get; set; }
 
+        public void Destroy()
+        {
+            throw new NotImplementedException();
+        }
     } 
 }

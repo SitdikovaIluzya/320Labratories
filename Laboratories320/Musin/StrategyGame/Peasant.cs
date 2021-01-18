@@ -6,5 +6,6 @@ namespace Laboratories320.Musin.StrategyGame
 {
     class Peasant : WorkerUnit
     {
+        public override int Health { get; set; } = 200;
     }
 }

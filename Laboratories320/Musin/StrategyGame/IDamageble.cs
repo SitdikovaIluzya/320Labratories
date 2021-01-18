@@ -6,5 +6,6 @@ namespace Laboratories320.Musin.StrategyGame
 {
     interface IDamageble
     {
+        int Damage { get; set; }
     }
 }

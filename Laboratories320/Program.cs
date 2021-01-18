@@ -6,7 +6,7 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Start the second practics");
+            Console.WriteLine("Start the second practic");
             Console.WriteLine();
         }
     }

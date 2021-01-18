@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Saifetdinov\StrategyGame\" />
+    <Folder Include="Saifetdinov\Prak2\" />
   </ItemGroup>
 
 </Project>

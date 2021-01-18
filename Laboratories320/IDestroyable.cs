@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Worker : Hero
+    interface IDestroyable
     {
-
+        public void Destroy();
     }
 }

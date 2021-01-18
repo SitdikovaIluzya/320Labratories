@@ -4,14 +4,13 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Archers : WarUnit, IShootable
+    class FlameThrower : WarUnit, IShootable
     {
         public string Weapon { get; set; }
         public int ShootRange { get; set; }
-
         public void Shoot()
         {
-
+     
         }
     }
 }

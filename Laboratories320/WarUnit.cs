@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class WarUnit
+    class WarUnit : Hero
     {
-
+        public double Attack { get; set; }
+        public double Reservation { get; set; }
+        public double Damage { get; set; }
     }
 }

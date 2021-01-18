@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Worker : Hero
+    class Vendor : Worker
     {
 
     }

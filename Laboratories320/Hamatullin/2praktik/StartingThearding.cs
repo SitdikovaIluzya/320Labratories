@@ -8,24 +8,25 @@ namespace Laboratories320.Hamatullin._2praktik
     class StartingThearding
     {
 
-        Object mass1 = new Arrays(new int[] { 1, 10, 15, 2, 40 });
-        Object mass2 = new Arrays(new int[] { 100, 10, 25, 20, 1 });
-        Object mass3 = new Arrays(new int[] { 40, 30, 25, 20, 10 });
-
         public static void Start()
         {
+            Massive massive1 = new Massive(new int[] { 1, 10, 15, 2, 40 });
+            Massive massive2 = new Massive(new int[] { 100, 10, 25, 20, 1 });
+            Massive massive3 = new Massive(new int[] { 40, 30, 25, 20, 10 });
             Thread thread1 = new Thread(new ParameterizedThreadStart(MethodsArray.Summa));
             Thread thread2 = new Thread(new ParameterizedThreadStart(MethodsArray.MaxElem));
             Thread thread3 = new Thread(new ParameterizedThreadStart(MethodsArray.SortArray));
+            thread1.Start(massive1.Array);
+            thread2.Start(massive2.Array);
+            thread3.Start(massive3.Array);
         }
     }
-    class Arrays
+    class Massive
     {
-        private int[] array;
         public int[] Array { get; set; }
-        public Arrays(int[] Array)
+        public Massive(int[] Array)
         {
-                this.Array = Array;
+            this.Array = Array;
         }
     }
 }

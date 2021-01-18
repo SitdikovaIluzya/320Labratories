@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game.Interfaces
 {
-    // Лечение или исцеление
+    // Лечение или восстановление
     interface IHeal
     {
         public int healPower { get; }

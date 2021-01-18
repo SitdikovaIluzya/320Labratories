@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game.Classes.WarUnits
 {
+    // Защитник
     class Defender : Unit, IAttack, IMove, IArmor, IObservancy, IHeal
     {
         public override int X { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }

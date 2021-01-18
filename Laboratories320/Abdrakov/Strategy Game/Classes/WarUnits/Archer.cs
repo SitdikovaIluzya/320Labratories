@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Abdrakov.Strategy_Game.Classes.WarUnits
 {
+    // Лучник
     class Archer : Unit, IAttack, IMove
     {
         public override int X { get => throw new NotImplementedException(); protected set => throw new NotImplementedException(); }

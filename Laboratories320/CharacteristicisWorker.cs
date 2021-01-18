@@ -4,7 +4,20 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class CharacteristicisWorker
+    abstract class CharacteristicisWorker
     {
+        public int _health;
+        public int _money;
+    }
+
+    abstract class CharacteristicWarnior
+    {
+        public int _health;
+        public int _uron;
+    }
+
+    abstract class CharacteristicBuilding
+    {
+        public int _defence;
     }
 }

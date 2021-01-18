@@ -4,15 +4,15 @@ using System.Text;
 
 namespace Laboratories320
 {
-     class Castle : CharacteristicBuilding, IBuilding
+    class WatchingTower : CharacteristicBuilding, IBuilding
     {
-        public Castle(int defence)
+        public WatchingTower(int defence)
         {
             _defence = defence;
         }
         public void Collabaration()
         {
-            Console.WriteLine("Castle collabaration");
+            Console.WriteLine("WatchingTower collabaration");
         }
     }
 }

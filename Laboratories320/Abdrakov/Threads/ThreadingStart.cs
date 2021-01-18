@@ -10,7 +10,7 @@ namespace Laboratories320.Abdrakov.Threads
     {
         public void PseudoMain()
         {
-            int[] array = { 800, 11, 50, 771, 649, 770, 240, 9 };
+            int[] array = { 800, -11, 50, -771, 649, 770, 240, -9 };
 
             Thread threadSort = new Thread(() => { Sort(array); });
             threadSort.Start();

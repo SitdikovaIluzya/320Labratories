@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._2praktik
 {
-    class MethodsArray
+    static class MethodsArray
     {
-        public void Summa(int[] Array)
+        public static void Summa(object obj)
         {
+            int[] Array = obj as int[];
             int sum = 0;
             for (int i = 0; i < Array.Length; i++)
             {
@@ -15,8 +16,9 @@ namespace Laboratories320.Hamatullin._2praktik
             }
             Console.WriteLine($"Сумма чисел в массиве: {sum}");
         }
-        public void MaxElem()
+        public static void MaxElem(object obj)
         {
+            int[] Array = obj as int[];
             int max = 0;
             for (int i = 0; i < Array.Length; i++)
             {
@@ -27,8 +29,9 @@ namespace Laboratories320.Hamatullin._2praktik
             }
             Console.WriteLine($"Максимальный элемент в массиве: {max}");
         }
-        public void SortArray()
+        public static void SortArray(object obj)
         {
+            int[] Array = obj as int[];
             int a = 0;
             for (int i = 0; i < Array.Length; i++)
             {

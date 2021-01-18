@@ -8,6 +8,7 @@ namespace Laboratories320.Abdrakov.Threads
 {
     class ThreadingStart
     {
+        // Call this to start threads
         public static void PseudoMain()
         {
             int[] array = { 800, -11, 50, -771, 649, 770, 240, -9 };
@@ -20,6 +21,7 @@ namespace Laboratories320.Abdrakov.Threads
             threadSum.Start();
         }
 
+        // Sorts array and prints it
         public static void SortArray(int[] arr)
         {
             int temp = 0;
@@ -42,11 +44,13 @@ namespace Laboratories320.Abdrakov.Threads
             Console.WriteLine();
         }
 
+        // Gets max value from array and prints it
         public static void MaxValue(int[] arr)
         {
             Console.WriteLine(arr.Max());
         }
 
+        // Get sum of array and prints it
         public static void SumArray(int[] arr)
         {
             Console.WriteLine(arr.Sum());

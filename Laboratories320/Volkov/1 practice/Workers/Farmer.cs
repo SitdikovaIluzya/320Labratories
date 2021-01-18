@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Laboratories320
+namespace Laboratories320.Volkov._1_practice.Workers
 {
-    class WarUnit
+    public class Farmer
     {
     }
 }

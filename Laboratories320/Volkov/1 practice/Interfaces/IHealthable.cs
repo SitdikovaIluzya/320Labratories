@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320
 {
-    interface IHealthable
+    public interface IHealthable
     {
+
     }
 }

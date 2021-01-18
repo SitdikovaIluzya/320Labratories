@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Laboratories320.Volkov._1_practice
+namespace Laboratories320.Volkov._1_practice.Interfaces
 {
-    class Unit
+    interface IRankable
     {
     }
 }

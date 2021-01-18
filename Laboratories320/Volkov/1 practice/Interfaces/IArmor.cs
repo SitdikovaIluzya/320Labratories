@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Laboratories320
+namespace Laboratories320.Volkov._1_practice.Interfaces
 {
-    public interface IMoveable
+    interface IArmor
     {
-
     }
 }

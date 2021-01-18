@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Volkov\1 practice\War_Units\Peoples\" />
+    <Folder Include="Volkov\1 practice\War_Units\Orks\" />
+    <Folder Include="Volkov\1 practice\War_Units\Gnomes\" />
+  </ItemGroup>
+
 </Project>

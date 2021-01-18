@@ -6,5 +6,7 @@ namespace Laboratories320.Musin.Thread
 {
     class ThreadStart
     {
+        public int[] Array { get; set; }
+
     }
 }

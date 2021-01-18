@@ -8,5 +8,5 @@ namespace Laboratories320.Musin.StrategyGame
     {
         public abstract int Health { get; set; }
 
-    }
+    } 
 }

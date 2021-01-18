@@ -10,9 +10,34 @@ namespace Laboratories320.Gankina.Threading
         public static Thread SumThread = new Thread(Sum);
         public static Thread MaxThread = new Thread(Max);
         public static Thread SortThread = new Thread(Sort);
+        
+       
+
+        static void Sort()
+        {
+            int[] array = { 100, 150, 290, 56, 4, 89, 2, 8, 430 };
+            int temp;
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int k = i + 1; k < array.Length; k++)
+                {
+                    if (array[i] > array[k])
+                    {
+                        temp = array[i];
+                        array[i] = array[k];
+                        array[k] = temp;
+                    }
+                }
+            }
+            foreach (var a in array)
+            {
+                Console.WriteLine(a);
+            }
+            Thread.Sleep(100);
+        }
         static void Sum()
         {
-            int[] array = { 2, 25, 555, 45, 5, 1, 3, 8, 55, 105, 188,166 };
+            int[] array = { 2, 25, 555, 45, 5, 1, 3, 8, 55, 105, 188, 166 };
             int sum = 0;
             for (int i = 0; i < array.Length; i++)
             {
@@ -21,10 +46,9 @@ namespace Laboratories320.Gankina.Threading
             Console.WriteLine(sum);
             Thread.Sleep(500);
         }
-
         static void Max()
         {
-            int[] array = { 5, 25, 88, 66, 5,10, 20, 888, 430 };
+            int[] array = { 5, 25, 88, 66, 5, 10, 20, 888, 430 };
             int max = array[0];
             for (int i = 0; i < array.Length; i++)
             {
@@ -35,29 +59,6 @@ namespace Laboratories320.Gankina.Threading
             }
             Console.WriteLine(max);
             Thread.Sleep(105);
-        }
-
-        static void Sort()
-        {
-            int[] array = { 100, 150, 290, 56, 4, 89, 2, 8, 430 };
-            int temp;
-            for (int i = 0; i < array.Length; i++)
-            {
-                for (int j = i + 1; j < array.Length; j++)
-                {
-                    if (array[i] > array[j])
-                    {
-                        temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
-                    }
-                }
-            }
-            foreach (var a in array)
-            {
-                Console.WriteLine(a);
-            }
-            Thread.Sleep(100);
         }
     }
 }

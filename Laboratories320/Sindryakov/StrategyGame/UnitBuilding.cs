@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Sindryakov.StrategyGame
 {
-    class UnitBuilding
+    class UnitBuilding: Unit
     {
     }
 }

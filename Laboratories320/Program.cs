@@ -7,7 +7,7 @@ namespace Laboratories320
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Начало 1 практики, мой первый коммит");
+            Console.WriteLine("почти доделал");
             Console.WriteLine();
         }
     }

@@ -8,9 +8,8 @@ namespace Laboratories320.Sindryakov.StrategyGame
     {
         public string Name { get; set; }
         public double Healt { get; set; }
-        public Unit(string name, double healt)
-        {
-
-        }
+        //public Unit(string name, double healt)
+        //{
+        //}
     }
 }

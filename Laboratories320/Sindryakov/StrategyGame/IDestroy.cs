@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Sindryakov.StrategyGame
 {
-    class WorkerUnit:Unit
+    interface IDestroy //Уничтожить героя оппонента
     {
+        void Destroy();
     }
 }

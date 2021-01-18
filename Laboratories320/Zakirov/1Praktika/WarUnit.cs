@@ -19,7 +19,7 @@ namespace Laboratories320.Zakirov._1Praktika
 
         public void Walk()
         {
-            Console.WriteLine("Герой ходит");
+            Console.WriteLine("Воин ходит");
         }
     }
 }

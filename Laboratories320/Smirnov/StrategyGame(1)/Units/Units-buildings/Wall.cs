@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Laboratories320.Smirnov.StrategyGame_1_.Interfaces;
 
 namespace Laboratories320.Smirnov.StrategyGame_1_.Units.Units_buildings
 {
-    //Стена. Есть хп, интерфейс разрушения
-    class Wall
+    class Wall : Unit, IDestroy
     {
+        public Wall(string name, int health) : base(name, health)
+        {
+
+        }
+
+        public void Destroy()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

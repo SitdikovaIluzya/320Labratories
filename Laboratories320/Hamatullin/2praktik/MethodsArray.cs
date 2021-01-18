@@ -4,15 +4,15 @@ using System.Text;
 
 namespace Laboratories320.Hamatullin._2praktik
 {
-    class Thearding
+    class MethodsArray
     {
         private int[] array;
         public int[] Array { get; set; }
-        public Thearding(int[] Array)
+        public MethodsArray(int[] Array)
         {
             this.Array = Array;
         }
-        public void Summa()
+        public void Summa(int[] Array)
         {
             int sum = 0;
             for (int i = 0; i < Array.Length; i++)

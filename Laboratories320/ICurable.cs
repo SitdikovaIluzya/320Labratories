@@ -4,11 +4,8 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Monk : Worker, ICurable
+    interface ICurable
     {
-        public void Heal()
-        {
-            
-        }
+        public void Heal();
     }
 }

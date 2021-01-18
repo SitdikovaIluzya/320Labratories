@@ -6,12 +6,6 @@ namespace Laboratories320.Hamatullin._2praktik
 {
     class MethodsArray
     {
-        private int[] array;
-        public int[] Array { get; set; }
-        public MethodsArray(int[] Array)
-        {
-            this.Array = Array;
-        }
         public void Summa(int[] Array)
         {
             int sum = 0;

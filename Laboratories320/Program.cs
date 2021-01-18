@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Laboratories320
 {
@@ -8,6 +9,12 @@ namespace Laboratories320
         {
             Console.WriteLine("Leave hope behind all who enters here...");
             Console.WriteLine('l');
+
+            //Thread t = new Thread(thread.ThreadSum.Sum);
+
+            //t.Start();
+
+           
         }
     }
 }

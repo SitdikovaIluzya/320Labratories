@@ -7,7 +7,8 @@ namespace Laboratories320
         static void Main(string[] args)
         {
             Threading.MaxThread.Start();
-            //Threading.SumThread.Start();
+            Threading.SumThread.Start();
+            Threading.SortThread.Start();
         }
     }
 }

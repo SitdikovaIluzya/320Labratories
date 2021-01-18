@@ -13,6 +13,7 @@ namespace Laboratories320
             Citadel cit1 = new Citadel("cit1", 30, 50);
             Defender def1 = new Defender("def1", 50, 80);
 
+
             att1.SendMessage();
             def1.DamageEnemy(att2);
         }

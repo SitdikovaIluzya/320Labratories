@@ -6,5 +6,6 @@ namespace Laboratories320.Tikhonov.Strategy_game
 {
     public abstract class ArmyClass
     {
+        //
     }
 }

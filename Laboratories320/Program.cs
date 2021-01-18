@@ -7,7 +7,6 @@ namespace Laboratories320
         static void Main(string[] args)
         {
             Console.WriteLine("Leave hope behind all who enters here...");
-            Console.WriteLine();
         }
     }
 }

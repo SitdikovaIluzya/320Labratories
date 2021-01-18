@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Gaifullin
 {
-    interface Interface_Move // Передвигаться
+    interface Interface_Health
     {
-
+        void Health();     
     }
 }

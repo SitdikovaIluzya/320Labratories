@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Gaifullin
 {
-    interface Interface_Destroy // Уничтожать
+    interface Interface_Work
     {
-
+        void Work();
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class PostalEmployee : CharacteristicisWorker, IWorker
+    class PostalEmployee : CharacteristicisWorker , IWorker
     {
         public PostalEmployee(int health, int money)
         {
@@ -24,4 +24,4 @@ namespace Laboratories320
             Console.WriteLine("Postal Employee eating");
         }
     }
-}
+    }

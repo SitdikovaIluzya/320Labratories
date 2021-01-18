@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Laboratories320.Mazitova.Pr1
 {
-    class DamageDealer
+    //Атакующий 
+    class DamageDealer : Unit
     {
+        public DamageDealer (string name, int health) 
+            : base (name, health)
+        {
+
+        }
     }
 }

@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Laboratories320.Mazitova.Pr1
 {
-    class King
+    // Король 
+    class King : Unit
     {
+        public King (string name, int health)
+         : base(name, health)
+        {
+
+        }
     }
 }

@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Laboratories320.Mazitova.Pr1
 {
-    class Seller
+    class Seller : Unit
     {
+        public Seller(string name, int health)
+        : base(name, health)
+        {
+
+        }
     }
 }

@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Laboratories320.Mazitova.Pr1
 {
-    class Bunker
+    //Бункер
+    class Bunker : Unit 
     {
+        public Bunker(string name, int health)
+   : base(name, health)
+        {
+
+        }
     }
 }

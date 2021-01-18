@@ -9,7 +9,7 @@ namespace Laboratories320.Kiyamov.Threaddd
     class ThreadM
     {
 
-        public static int[] array = { 0, 6, 1, 5, 15, 2, -29, -66, 2, 22, 7 };
+        public static int[] array = { 0, 6, 1, 5, 15, 2, -29, -66, 2, 22, 6 };
         public static void Start()
         {
             var thr1 = new Thread(Sum);

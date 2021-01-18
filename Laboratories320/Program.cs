@@ -1,4 +1,5 @@
 ﻿using System;
+using Laboratories320.Shigapov.Practic2;
 
 namespace Laboratories320
 {
@@ -8,6 +9,8 @@ namespace Laboratories320
         {
             Console.WriteLine("Leave hope behind all who enters here....");
             Console.WriteLine();
+           
+            StartArray.BaseArr();
         }
     }
 }

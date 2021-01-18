@@ -8,11 +8,11 @@ namespace Laboratories320.Abdrakov.Threads
 {
     class ThreadingStart
     {
-        public void PseudoMain()
+        public static void PseudoMain()
         {
             int[] array = { 800, -11, 50, -771, 649, 770, 240, -9 };
 
-            Thread threadSort = new Thread(() => { Sort(array); });
+            Thread threadSort = new Thread(() => { SortArray(array); });
             threadSort.Start();
             Thread threadMax = new Thread(() => { MaxValue(array); });
             threadMax.Start();
@@ -20,7 +20,7 @@ namespace Laboratories320.Abdrakov.Threads
             threadSum.Start();
         }
 
-        public void Sort(int[] arr)
+        public static void SortArray(int[] arr)
         {
             int temp = 0;
 
@@ -42,12 +42,12 @@ namespace Laboratories320.Abdrakov.Threads
             Console.WriteLine();
         }
 
-        public void MaxValue(int[] arr)
+        public static void MaxValue(int[] arr)
         {
             Console.WriteLine(arr.Max());
         }
 
-        public void SumArray(int[] arr)
+        public static void SumArray(int[] arr)
         {
             Console.WriteLine(arr.Sum());
         }

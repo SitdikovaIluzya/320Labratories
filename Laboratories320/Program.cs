@@ -1,55 +1,58 @@
 ﻿using System;
 using System.Threading;
+using Laboratories320.threads;
+
 
 namespace Laboratories320
 {
     class Program
     {
-        static double[] arr = { 1, 8, 3, 9, 5 };  
-        static double sum = 0;
-        static double max;
+
+        static int[] arr1 = new int[10];
+        static int[] arr2 = new int[10];
+        static int[] arr3 = new int[10];
+        static object locker = new object();
         static void Main(string[] args)
         {
 
-            Thread t = new Thread(Sum);
-            t.Start(); 
-            Thread t1 = new Thread(Max);
-            t1.Start();
-            Thread t2 = new Thread(Sort);
-            t2.Start();
-            
-        }
-        static void Sum()
-        {
-            
-         
-            for (int i = 0; i < arr.Length; i++)
-            {
+            Thread th1 = new Thread(Random_Ar);
+            th1.Start();
+            Thread th2 = new Thread(Sum);
+            th2.Start();
 
-                sum = sum + arr[i];
-            }
-            Console.WriteLine("Сумма= "+sum);
         }
-       static void Max()
+        static void Random_Ar()
         {
-            
-            for (int i = 1; i < arr.Length; i++)
+            lock (locker)
             {
-                if (arr[i] > arr[i - 1])
+                Random rnd = new Random();
+                for (int i = 0; i < 10; i++)
                 {
-                    max = arr[i];
+                    arr1[i] = rnd.Next(10);
+                    arr2[i] = rnd.Next(10);
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine(arr1[i] + "," + arr2[i]);
                 }
             }
-            Console.WriteLine("Максимальное число= "+max);
-       }
-        static void Sort()
+        }
+
+        static void Sum()
         {
-            Array.Sort(arr);
-            for (int i =0; i < arr.Length; i++)
+            for (int i = 0; i < 10; i++)
             {
-                 Console.Write(arr[i]+" " );
+                arr3[i] = arr1[i] + arr2[i];
             }
-           
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(arr3[i]);
+            }
         }
     }
+
 }
+
+    
+
+

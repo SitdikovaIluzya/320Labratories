@@ -11,19 +11,40 @@ namespace Laboratories320
         static object locker = new object();
         static void Main(string[] args)
         {
-
+            Thread th1 = new Thread(Random_Ar);
+            Thread th2 = new Thread(Sum);
+            th1.Start();
+            th2.Start();
         }
 
         static void Random_Ar()
         {
             lock (locker)
             {
+                Console.WriteLine("Поток 1");
                 Random rnd = new Random();
-                for(int i = 0; i < 10; i++)
+                for (int i = 0; i < 10; i++)
                 {
-                    array_1[i] = rnd.Next();
-                    array_2[i] = rnd.Next();
+                    array_1[i] = rnd.Next(10);
+                    array_2[i] = rnd.Next(10);
                 }
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine(array_1[i] + ", " + array_2[i]);
+                }
+            }
+        }
+
+        static void Sum()
+        {
+            Console.WriteLine("Поток 2");
+            for (int i = 0; i < 10; i++)
+            {
+                array_3[i] = array_1[i] + array_2[i];
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(array_3[i]);
             }
         }
 

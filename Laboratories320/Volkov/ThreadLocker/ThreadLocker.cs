@@ -14,7 +14,7 @@ namespace Laboratories320.Volkov.ThreadLocker
 
         static void FillingArr()
         {
-            lock (locker)
+            lock(locker)
             {
                 Random rnd = new Random();
                 Console.WriteLine("First array:");
@@ -36,11 +36,16 @@ namespace Laboratories320.Volkov.ThreadLocker
 
         static void SumArray()
         {
-            Console.WriteLine("Result array: ");
-            for (int i = 0; i < res.Length; i++)
+            Thread.Sleep(50);
+            
             {
-                res[i] = arr1[i] + arr2[i];
-                Console.Write(res[i] + "; ");
+                Console.WriteLine("Result array: ");
+                for (int i = 0; i < res.Length; i++)
+                {
+                    res[i] = arr1[i] + arr2[i];
+                    Console.Write(res[i] + "; ");
+                }
+                Console.WriteLine();
             }
         }
 
@@ -48,9 +53,11 @@ namespace Laboratories320.Volkov.ThreadLocker
         {
             Thread fillarr = new Thread(FillingArr);
             fillarr.Start();
-            Thread sumarr = new Thread(SumArray);
-            sumarr.Start();
 
+            Thread sumarr = new Thread(SumArray);
+            
+            sumarr.Start();
+            
         }
 
     }

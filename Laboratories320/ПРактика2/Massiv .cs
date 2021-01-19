@@ -35,7 +35,22 @@ namespace Laboratories320.ПРактика2
             Console.WriteLine("Sum: " + Sum);
         }
 
-        
+        public static void Max(object obj)
+        {
+            Arr a = (Arr)obj;
+            int[] arr = a.array;
+            int max = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                }
+            }
+            Console.WriteLine("Max: " + max);
+        }
+
+
         public static void Sort(object obj)
         {
             int[] array = { -2, 30, -111, 156, 1223 };

@@ -23,3 +23,4 @@ namespace Laboratories320.SemSaet
             throw new NotImplementedException();
         }
     }
+}

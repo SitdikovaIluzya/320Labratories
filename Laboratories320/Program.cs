@@ -1,5 +1,6 @@
 ﻿using System;
 using Laboratories320.Zakirov._2Thread;
+using Laboratories320.Zakirov._3ThreadLocker;
 
 namespace Laboratories320
 {
@@ -7,7 +8,7 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            Threadingg.Start();
+            ThreadLock.StartingThread();
         }
     }
 }

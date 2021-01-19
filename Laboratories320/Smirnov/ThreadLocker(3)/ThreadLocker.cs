@@ -43,6 +43,7 @@ namespace Laboratories320.Smirnov.ThreadLocker_3_
                     Console.WriteLine();
                 }
             }
+            //без слипа работает неккоректно
             static void SumTwoArray()
             {
                 Thread.Sleep(100);

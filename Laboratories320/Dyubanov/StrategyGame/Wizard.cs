@@ -22,12 +22,13 @@ namespace Laboratories320.Dyubanov.StrategyGame
 
         public void Move()
         {
+            Console.WriteLine(this.Name + ": Moving");
             throw new NotImplementedException();
         }
 
         public void SendMessage()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(this.Name + ": Ready for battle!");
         }
     }
 }

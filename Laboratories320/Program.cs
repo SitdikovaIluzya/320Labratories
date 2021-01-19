@@ -9,8 +9,7 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            Locker locker = new Locker();
-            locker.Start();
+
         }
     }
 }

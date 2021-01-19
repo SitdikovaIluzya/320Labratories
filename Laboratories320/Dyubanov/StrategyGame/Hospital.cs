@@ -12,7 +12,7 @@ namespace Laboratories320.Dyubanov.StrategyGame
 
         public void HealTeammate(Unit teammate)
         {
-            teammate.Health = teammate.Health + 10;
+            teammate.Health = teammate.Health + 100;
             throw new NotImplementedException();
         }
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Tikhonov.Strategy_game
 {
-    interface Ipaladin
+    interface Ipaladin : IbaseUnit
     {
         
         int ArmorClass { get; set; }
@@ -12,7 +12,7 @@ namespace Laboratories320.Tikhonov.Strategy_game
         int Damage { get; set; }
 
         void melee_attack();
-        void heal_ally(BaseUnit ally);
+        void heal_ally(IbaseUnit ally);
         void move();
 
     }

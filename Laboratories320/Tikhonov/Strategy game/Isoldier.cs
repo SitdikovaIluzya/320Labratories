@@ -1,6 +1,6 @@
 ﻿namespace Laboratories320.Tikhonov.Strategy_game
 {
-    internal interface Isoldier
+    internal interface Isoldier : IbaseUnit
     {
         int ArmorClass { get; set; }
         int Speed { get; set; }

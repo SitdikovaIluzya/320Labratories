@@ -6,6 +6,6 @@ namespace Laboratories320
 {
     public interface IMoveable
     {
-
+        public void Move();
     }
 }

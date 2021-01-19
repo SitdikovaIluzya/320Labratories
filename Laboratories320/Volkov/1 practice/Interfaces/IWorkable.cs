@@ -6,6 +6,6 @@ namespace Laboratories320
 {
     public interface IWorkable
     {
-
+        public void Work();
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Volkov._1_practice.Interfaces
 {
-    interface IArmor
+    public interface IDestroy
     {
+        public void Destroy();
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320.Volkov._1_practice.Interfaces
 {
-    interface IShoot
+    interface IDefendable
     {
+        public void Defend(Unit unit);
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Shooter //стрелок
+    interface IGetMaterial
     {
+        public int GetMaterial();
     }
 }

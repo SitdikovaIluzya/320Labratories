@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Infantryman //пехотинец
+    interface IRestoreHealth
     {
+        public int RestoreHealth();
     }
 }

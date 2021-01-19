@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Laboratories320
 {
-    class Worker
+    interface IDestroyBuilding
     {
+        public int DestroyBuilding();
     }
 }

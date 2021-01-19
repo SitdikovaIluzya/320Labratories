@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratories320.ПРактика2;
+using System;
 
 namespace Laboratories320
 {
@@ -7,7 +8,9 @@ namespace Laboratories320
         static void Main(string[] args)
         {
             Console.WriteLine("Leave hope behind all who enters here...");
-           
+            Console.WriteLine();
+
+            Massiv.List();
         }
     }
 }

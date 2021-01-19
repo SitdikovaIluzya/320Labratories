@@ -12,6 +12,6 @@ namespace Laboratories320.Saifetdinov.StrategyGame
         {
             Console.WriteLine("To raise their shields");
         }
-    }    {
+    
     }
 }

@@ -10,7 +10,7 @@ namespace Laboratories320.threads
         static double[] arr = { 1, 8, 3, 9, 5 };
         static double sum = 0;
         static double max;
-        static void aaa()
+        static void MainTwo()
         {
 
             Thread t = new Thread(Sum);

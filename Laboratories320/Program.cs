@@ -1,6 +1,7 @@
 ﻿using Laboratories320.Volkov.SecondPractice;
 using System;
 using System.Threading;
+using Laboratories320.Volkov.ThreadLocker;
 
 namespace Laboratories320
 {
@@ -8,8 +9,7 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leave hope behind all who enters here...");
-            
+            ThreadLocker.Work();
         }
         
     }

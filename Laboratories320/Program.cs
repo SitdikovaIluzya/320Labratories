@@ -1,14 +1,38 @@
 ﻿using System;
+using System.Threading;
 using Laboratories320.Lab2;
+
 namespace Laboratories320
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            Threading.MaxThread.Start();
-            Threading.SumThread.Start();
-            Threading.SortThread.Start();
+            Random rnd = new Random();
+            int[] arr = new int[10];
+            foreach (var item in arr)
+            {
+                arr[1] = rnd.Next(-10, 20);
+            }
+            Threading th = new Threading(arr);
+            th.Start();
         }
+
     }
 }
+
+
+
+
+
+
+
+        
+    
+
+
+
+
+    
+

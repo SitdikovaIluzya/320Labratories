@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Laboratories320.Zakirov.Thread
+namespace Laboratories320.Zakirov._2Thread
 {
     class ThreeMethods
     {
@@ -13,9 +13,9 @@ namespace Laboratories320.Zakirov.Thread
             int[] arr = obj as int[];
             arr = numbers;
             int sum = 0; 
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                sum += numbers[i];
+                sum += arr[i];
             }
             Console.WriteLine("Сумма всех чисел: " + sum);
         }
@@ -25,11 +25,11 @@ namespace Laboratories320.Zakirov.Thread
             int[] arr = obj as int[];
             arr = numbers;
             int max = 0;
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (numbers[i] > max)
+                if (arr[i] > max)
                 {
-                    max = numbers[i];
+                    max = arr[i];
                 }
             }
             Console.WriteLine("Максимальное число: " + max);
@@ -40,21 +40,21 @@ namespace Laboratories320.Zakirov.Thread
             int[] arr = obj as int[];
             arr = numbers;
             int element = 0;
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                for (int j = i + 1; j < numbers.Length; j++)
+                for (int j = i + 1; j < arr.Length; j++)
                 {
-                    if (numbers[i] > numbers[j])
+                    if (arr[i] > arr[j])
                     {
-                        element = numbers[i];
-                        numbers[i] = numbers[j];
-                        numbers[j] = element;
+                        element = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = element;
                     }
                 }
             }
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine(numbers[i]);
+                Console.WriteLine(arr[i]);
             }
         }
     }

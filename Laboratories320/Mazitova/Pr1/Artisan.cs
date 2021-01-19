@@ -4,10 +4,17 @@ using System.Text;
 
 namespace Laboratories320.Mazitova.Pr1
 {
-    class Artisan : Unit
+    //Ремесленник
+    class Artisan : Unit, IMovable
     {
+        public string Rang { get; set; }
         public Artisan(string name, int health)
         : base(name, health)
+        {
+
+        }
+
+        public void Move()
         {
 
         }

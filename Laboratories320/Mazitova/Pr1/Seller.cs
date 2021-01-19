@@ -4,12 +4,18 @@ using System.Text;
 
 namespace Laboratories320.Mazitova.Pr1
 {
-    class Seller : Unit
+    //Продовец
+    class Seller : Unit, IMovable
     {
         public Seller(string name, int health)
-        : base(name, health)
+             : base(name, health)
         {
 
+        }
+
+        public void Move()
+        {
+            
         }
     }
 }

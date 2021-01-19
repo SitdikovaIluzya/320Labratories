@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Laboratories320.Mazitova.Pr1
 {
-    //Башня
-    class Tower : Unit
+    interface IHealingable
     {
-        public Tower(string name, int health)
-            : base(name, health)
+        void Healing(Unit units1, Unit units2)
         {
 
         }

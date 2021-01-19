@@ -6,39 +6,55 @@ using Laboratories320.Kiyamov.ThreadLocker;
 
 namespace Laboratories320.Kiyamov.ThreadLocker
 {
-    class ThreadLock
+    public class ThreadLock
     {
-        int[] array = new int[5];
-        static int[] Mass1 = new int[5];
-        static int[] Mass2 = new int[5];
-        static int[] resuilts = new int[5];
 
+        static Object locker = new object();
+        static int[] Massive1 = new int[10];
+        static int[] Massive2 = new int[10];
+        static int[] resuilt =  new int[10];
 
-        
-        
-       
-        public void MassiveGenarate()
+   
+
+        public static void MassiveGenerate()
         {
-      
-            Random rnd = new Random();
-            for (int i = 0; i < array.Length; i++)
+            lock (locker)
             {
-                array[i] = rnd.Next(1, 20);
+                Random rnd = new Random();
+                for (int i = 0; i < Massive1.Length; i++)
+                {
+                    Massive1 [i] = rnd.Next(10, 20);
+                    Massive2 [i] = rnd.Next(10, 20);
+                }
             }
-            Console.WriteLine("Massive : " + Mass1);
-            foreach (var item in array)
-            {
-                Console.WriteLine(item + " ");
-                
-            }
-      
         }
-
-    }
-
-}
-
-
+        public static void MassiveSum()
+        {
     
+            {
+                lock (locker)
+                {
+                    Console.Write("Sum:  ");
+                    for (int i = 0; i < resuilt.Length; i++)
+                    {
+                        resuilt[i] = Massive1[i] + Massive2[i];
+                    }
+                    foreach (var item in resuilt)
+                    {
+                        Console.Write(item + " ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+        }
+        public static void Start()
+        {
+            Thread thr1 = new Thread(MassiveGenerate);
+            Thread thr2 = new Thread(MassiveSum);
+            thr1.Start();
+            thr2.Start();
+        }
+    }
+}
 
 

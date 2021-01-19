@@ -19,6 +19,7 @@ namespace Laboratories320.Abdrakov.ThreadLock
         {
             Thread threadSort = new Thread(() => { GenerateArrays(); });
             threadSort.Start();
+            Thread.Sleep(10);
             Thread threadMax = new Thread(() => { FindEachSum(); });
             threadMax.Start();
         }

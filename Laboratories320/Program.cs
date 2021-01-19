@@ -1,13 +1,14 @@
 ﻿using System;
 
-namespace Laboratories320
+namespace Laboratories320.Tikhonov.Strategy_game
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leave hope behind all who enters here..");
-            Console.WriteLine();
+            ArmyClass armyClass = new ArmyClass(10, 10, 10);
+            Iwizard wizard = armyClass;
+            wizard.heal_ally(wizard);
         }
     }
 }

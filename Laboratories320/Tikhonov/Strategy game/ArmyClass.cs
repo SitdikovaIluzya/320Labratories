@@ -17,9 +17,9 @@ namespace Laboratories320.Tikhonov.Strategy_game
             this.Damage = damage;
         }
 
-        public ArmyClass(int hitPoints, int speed, int damage)
+        public ArmyClass(int hitPoints, int speed, int damage) : base(hitPoints)
         {
-            base.hitPoints = hitPoints;
+
             this.speed = speed;
             this.damage = damage;
         }
@@ -28,9 +28,9 @@ namespace Laboratories320.Tikhonov.Strategy_game
         public int Speed { get { return (speed); } set { speed = value; } }        
         public int Damage { get { return (damage); } set { damage = value; } }
 
-        public void heal_ally()
+        public void heal_ally(BaseUnit ally)
         {
-            throw new NotImplementedException();
+            ally.hitPoints += this.damage;
         }
 
         public void melee_attack()

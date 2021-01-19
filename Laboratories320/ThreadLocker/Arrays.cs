@@ -6,5 +6,6 @@ namespace Laboratories320.ThreadLocker
 {
     class Arrays
     {
+        static int[] array1 = new int[10];
     }
 }

@@ -24,6 +24,7 @@ namespace Laboratories320.Abdrakov.ThreadLock
             Thread threadMax = new Thread(() => { FindEachSum(); });
             threadMax.Start();
             Thread.Sleep(50);
+            // Вывожу все массивы после генерации и нахождения суммы
             lock (resultLock)
             {
                 Console.WriteLine("[{0}]", string.Join(", ", array1));

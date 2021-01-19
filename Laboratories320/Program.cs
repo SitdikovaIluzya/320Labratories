@@ -1,4 +1,5 @@
-﻿using Laboratories320.Abdrakov.Threads;
+﻿using Laboratories320.Abdrakov.ThreadLock;
+using Laboratories320.Abdrakov.Threads;
 using System;
 
 namespace Laboratories320
@@ -9,6 +10,7 @@ namespace Laboratories320
         {
             Console.WriteLine("Leave hope behind all who enters here...");
             Console.WriteLine();
+            ThreadLock.PseudoMain();
         }
     }
 }

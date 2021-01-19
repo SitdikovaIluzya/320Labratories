@@ -6,6 +6,6 @@ namespace Laboratories320.Tikhonov.Strategy_game
 {
     public interface IbaseUnit
     {
-        public int hitPoints { get; set; }
+        public int HitPoints { get; set; }
     }
 }

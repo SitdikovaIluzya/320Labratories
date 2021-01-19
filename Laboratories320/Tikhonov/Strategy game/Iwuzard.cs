@@ -8,8 +8,8 @@ namespace Laboratories320.Tikhonov.Strategy_game
     {
         int Speed { get; set; }
         int Damage { get; set; }
-        void range_attak();
-        void heal_ally(IbaseUnit ally);
+        void range_attak(IbaseUnit unit);
+        void heal_ally(IbaseUnit unit);
         void move();
     }
 }

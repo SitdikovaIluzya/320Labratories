@@ -12,7 +12,6 @@ namespace Laboratories320.Abdrakov.ThreadLock
         private static int[] arrayOut = new int[10];
 
         private static object arrayLock = new object();
-        private static object resultLock = new object();
 
         private static Random random = new Random();
 
@@ -22,12 +21,6 @@ namespace Laboratories320.Abdrakov.ThreadLock
             threadSort.Start();
             Thread threadMax = new Thread(() => { FindEachSum(); });
             threadMax.Start();
-            lock (resultLock)
-            {
-                Console.WriteLine(array1);
-                Console.WriteLine(array2);
-                Console.WriteLine(arrayOut);
-            }
         }
 
         private static void GenerateArrays()
@@ -45,17 +38,17 @@ namespace Laboratories320.Abdrakov.ThreadLock
 
         private static void FindEachSum()
         {
-            lock (resultLock)
+            for (int i = 0; i < 10; ++i)
             {
-                for (int i = 0; i < 10; ++i)
+                lock (arrayLock)
                 {
-                    lock (arrayLock)
-                    {
-                        arrayOut[i] = array1[i] + array2[i];
-                    }
+                    arrayOut[i] = array1[i] + array2[i];
                 }
-                Console.WriteLine("Finding each sum finished");
             }
+            Console.WriteLine("Finding each sum finished");
+            Console.WriteLine("[{0}]", string.Join(", ", array1));
+            Console.WriteLine("[{0}]", string.Join(", ", array2));
+            Console.WriteLine("[{0}]", string.Join(", ", arrayOut));
         }
     }
 }

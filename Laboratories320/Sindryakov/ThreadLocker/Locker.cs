@@ -7,21 +7,31 @@ namespace Laboratories320.Sindryakov.ThreadLocker
 {
     class Locker
     {
-        public static void Start()
-        {
             // начало выполнения 3 практики
-            int[] numbers1 = { 3, 4, 45, 29, 2, 23, 48, 33, 1, 54 };
-            int[] numbers2 = { 8, 4, 13, 16, 2, 15, 48, 33, 5, 52 };
+            //int[] numbers1 = { 3, 4, 45, 29, 2, 23, 48, 33, 1, 54 };
+            //int[] numbers2 = { 8, 4, 13, 16, 2, 15, 48, 33, 5, 52 };
             //int[] numbers3 = { 8, 4, 13, 16, 2, 15, 48, 33, 5, 43 };
 
-            Thread thr1 = new Thread(Summ);
-            Thread thr2 = new Thread(Generate);
+            static int[] outcome = new int[10];
+            static int[] numbers1 = new int[10];
+            static int[] numbers2 = new int[10];
 
-            //lock - написать
+            static object locker = new object();
 
+        //Thread thr1 = new Thread(Summ);
+        //Thread thr2 = new Thread(Generate);
+
+        //lock - написать
+
+        //thr2.Start(numbers2);
+        public static void GoOff()
+        {
+            Thread thr1 = new Thread(Transform);
+            Thread thr2 = new Thread(TotalSum);
+            thr1.Start(numbers1);
             thr2.Start(numbers2);
         }
-        public static void Summ(object obj)
+        public static void TotalSum(object obj)
         {
 
             int[] nums1 = (int[])obj;
@@ -40,7 +50,7 @@ namespace Laboratories320.Sindryakov.ThreadLocker
             int sum = sum1 + sum2;
             Console.WriteLine("Сумма элементов массива:" + sum);
         }
-        public static void Generate(object obj)
+        public static void Transform(object obj)
         {
             Console.WriteLine("Генерация: ");
         }

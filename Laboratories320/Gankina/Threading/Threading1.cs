@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace Laboratories320.Gankina.Threading
 {
-    class Threading
+    class Threading1
     {
         public static Thread SumThread = new Thread(Sum);
         public static Thread MaxThread = new Thread(Max);

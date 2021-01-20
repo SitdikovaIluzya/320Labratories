@@ -1,4 +1,5 @@
-﻿using Laboratories320.Gankina.Threading;
+﻿using Laboratories320.Gankina.praktika3;
+using Laboratories320.Gankina.Threading;
 using System;
 using System.Threading;
 
@@ -8,8 +9,8 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leave hope behind all who enters here...");
-            Console.WriteLine();
+            Threading thr = new Threading();
+            thr.Start();
         }
     }
 }

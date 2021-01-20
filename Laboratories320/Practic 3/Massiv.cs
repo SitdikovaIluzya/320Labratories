@@ -26,5 +26,16 @@ namespace Laboratories320.Practic_3
                 Console.WriteLine("[{0}]", string.Join(", ", array3));
             }
 
+        public static void Summ()
+        {
+            lock (Result)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    array3[i] = array1[i] + array2[i];
+                }
+                Console.WriteLine("Summ");
+            }
+        }
     }
 }

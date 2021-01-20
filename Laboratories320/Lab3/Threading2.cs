@@ -9,24 +9,17 @@ namespace Laboratories320.Lab3
     class Threading2
     {
         static object locker = new object();
-        public int[] Array1 { get; set; }
-        public int[] Array2 { get; set; }
-
-        public int[] array;
-        public Threading2(int[] array1, int[] array2)
-        {
-            this.Array1 = array1;
-            this.Array2 = array1;
-        }
-
+        static int[] array1 = new int[10];
+        static int[] array2 = new int[10];
+        static int[] array = new int[10];
         public void Start()
         {
             Thread GenThr = new Thread(Generator);
             Thread SumThr = new Thread(Sum);
-            SumThr.Start();
-            Thread.Sleep(100);
             GenThr.Start();
-
+            Thread.Sleep(100);
+            SumThr.Start();
+            Thread.Sleep(200);
             
         }
         public void Generator()
@@ -34,19 +27,47 @@ namespace Laboratories320.Lab3
             lock (locker)
             {
                 Random rnd = new Random();
-                for (int i = 0; i < Array1.Length && i < Array2.Length; i++)
+                for (int i = 0; i < array1.Length; i++)
                 {
-                    Array1[i] = rnd.Next(-10, 100);
-                    Array2[i] = rnd.Next(-20, 50);
+                    array1[i] = rnd.Next(-10, 100);
+                }
+                Console.WriteLine("Первый массив");
+                foreach (var it in array1)
+                {
+                    Console.WriteLine(it + " ");
                 }
             }
+            lock (locker)
+            {
+                Random rnd = new Random();
+                for (int i = 0; i < array2.Length; i++)
+                {
+                    array2[i] = rnd.Next(-10, 100);
+                }
+
+                Console.WriteLine("Второй массив");
+                foreach (var it in array2)
+                {
+                    Console.WriteLine(it + " ");
+                }
+            }
+               
+            
         }
 
         public void Sum()
         {
-            for (int i = 0; i < array.Length; i++)
+            lock (locker)
             {
-                array[i] = Array1[1] + Array2[i];
+                for (int i = 0; i < array1.Length && i < array2.Length; i++)
+                {
+                    array[i] = array1[1] + array2[i];
+                }
+                Console.WriteLine("Сумма двух массивов");
+                foreach (var item in array)
+                {
+                    Console.WriteLine(item + " ");
+                }
             }
         }
     }

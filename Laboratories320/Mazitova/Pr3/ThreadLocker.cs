@@ -49,7 +49,6 @@ namespace Laboratories320.Mazitova.Pr3
                 }
             }
 
-
         }
         public void Start()
         {

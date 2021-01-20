@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratories320.Mazitova.Pr3;
+using System;
 
 namespace Laboratories320
 {
@@ -8,6 +9,10 @@ namespace Laboratories320
         {
             Console.WriteLine("Leave hope behind all who enters here...");
             Console.WriteLine();
+
+            ThreadLocker thr = new ThreadLocker();
+            thr.Start();
+
         }
     }
 }

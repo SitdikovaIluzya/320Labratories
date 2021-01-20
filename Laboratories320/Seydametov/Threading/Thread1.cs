@@ -6,9 +6,9 @@ using System.Threading;
 
 namespace Laboratories320.Seydametov.Threading
 {
-    class Class1
+    class Thread1
     {
-        public static void Main()
+        public static void Thread_Main()
         {
             int[] array = { 525, 26, -65, 752, -58, 634, -78, 3 };
 
@@ -63,8 +63,5 @@ namespace Laboratories320.Seydametov.Threading
             Console.WriteLine();
         }
 
-      
-
-        
     }
 }

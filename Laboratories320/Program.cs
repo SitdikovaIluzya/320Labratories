@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Laboratories320.Seydametov.Threading;
+using System;
 using System.Threading;
 
 namespace Laboratories320
 {
     class Program
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Leave hope behind all who enters here...");
-            Console.WriteLine();
+            //Thread1.Thread_Main();
+            Thread_lock_prog.Thread_lock_Main(); 
            
         }
     }

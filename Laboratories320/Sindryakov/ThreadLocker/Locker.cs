@@ -15,28 +15,45 @@ namespace Laboratories320.Sindryakov.ThreadLocker
         static object locker = new object();
 
 
-        //lock - написать
-
-        public static void GoOff()
+        public static void GoOff() //старт
         {
             Thread thr1 = new Thread(Transform);
             Thread thr2 = new Thread(TotalSum);
             thr1.Start(numbers1);
             thr2.Start(numbers2);
         }
-        public static void TotalSum()
+        public static void TotalSum() //сумма
         {
             Thread.Sleep(100);
             for (int i = 0; i < outcome.Length; i++)
             {
+                outcome[i] = numbers1[i] + numbers2[i];
+                Console.WriteLine("Сумма элементов массива: ");
+                Console.Write(outcome[i] + " ");
+                Console.WriteLine();
             }
-            Console.WriteLine("Сумма элементов массива:" + sum);
+            
         }
-        public static void Transform(object obj)
+        public static void Transform() //генерируем
         {
             lock (locker)
             {
-                Console.WriteLine("Генерирование значений - ");
+                Random rnd = new Random();
+                for (int i = 0; i < numbers1.Length; i++)
+                {
+                    numbers1[i] = rnd.Next(1, 9);
+                    Console.WriteLine("Генерирование значений - ");
+                    Console.Write(numbers1[i] + " ");
+                    Console.WriteLine();
+                }
+
+                for (int i = 0; i < numbers2.Length; i++)
+                {
+                    numbers2[i] = rnd.Next(1, 9);
+                    Console.WriteLine("Генерирование значений - ");
+                    Console.Write(numbers2[i] + " ");
+                    Console.WriteLine();
+                }
             }
         }
     }

@@ -11,6 +11,10 @@ namespace Laboratories320
             Console.WriteLine();
 
             Massiv.List();
+            
+            Massiv.();
+
+
         }
     }
 }

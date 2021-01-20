@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace Laboratories320.Lab3
 {
-    
+
     class Threading2
     {
         static object locker = new object();
@@ -20,7 +20,7 @@ namespace Laboratories320.Lab3
             Thread.Sleep(100);
             SumThr.Start();
             Thread.Sleep(200);
-            
+
         }
         public void Generator()
         {
@@ -51,8 +51,8 @@ namespace Laboratories320.Lab3
                     Console.WriteLine(it + " ");
                 }
             }
-               
-            
+
+
         }
 
         public void Sum()

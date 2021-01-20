@@ -7,10 +7,7 @@ namespace Laboratories320.Lab2
 {
     class Threading
     {
-
-        int[] array;
-
-        public int[] Array { get => array; set => array = value; }
+        public int[] Array { get; set; }
 
         public Threading(int[] array)
         {
@@ -33,21 +30,21 @@ namespace Laboratories320.Lab2
         public void Sum()
         {
             int sum = 0;
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < Array.Length; i++)
             {
-                sum += array[i];
+                sum += Array[i];
             }
             Console.WriteLine("Сумма элементов массива" + " " + sum);
         }
 
         public void Max()
         {
-            int max = array[0];
-            for (int i = 0; i < array.Length; i++)
+            int max = Array[0];
+            for (int i = 0; i < Array.Length; i++)
             {
-                if (max < array[i])
+                if (max < Array[i])
                 {
-                    max = array[i];
+                    max = Array[i];
                 }
             }
             Console.WriteLine("Максимальный элемент массива" + " " + max);
@@ -56,20 +53,20 @@ namespace Laboratories320.Lab2
         public void Sort()
         {
             int temp;
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < Array.Length; i++)
             {
-                for (int j = i + 1; j < array.Length; j++)
+                for (int j = i + 1; j < Array.Length; j++)
                 {
-                    if (array[i] > array[j])
+                    if (Array[i] > Array[j])
                     {
-                        temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
+                        temp = Array[i];
+                        Array[i] = Array[j];
+                        Array[j] = temp;
                     }
                 }
             }
             Console.WriteLine("Отсортированный массив");
-            foreach (var a in array)
+            foreach (var a in Array)
             {
                 Console.WriteLine(a + " ");
             }

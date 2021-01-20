@@ -4,7 +4,36 @@ using System.Text;
 
 namespace Laboratories320.Tikhonov.Strategy_game
 {
-    public abstract class BuildingClass
+    public class BuildingClass : Itower, IholyObelisk, 
     {
+        int damage;
+        int hitPoints;
+        public BuildingClass(int hitPoints, int damage)
+        {
+            this.Damage = damage;
+            this.HitPoints = hitPoints;
+        }
+
+        public BuildingClass(int hitPoints)
+        {
+
+            this.HitPoints = hitPoints;
+
+        }
+
+        public int Damage { get { return (damage); } set { damage = value; } }
+        public int HitPoints { get { return (hitPoints); } set { hitPoints = value; } }
+
+
+
+        public void range_attak(IbaseUnit unit)
+        {
+            unit.HitPoints -= this.damage;
+        }
+
+        public void heal_ally(IbaseUnit unit)
+        {
+            unit.HitPoints += this.damage;
+        }
     }
 }

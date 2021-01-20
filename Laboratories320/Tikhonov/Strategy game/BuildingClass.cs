@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Tikhonov.Strategy_game
 {
-    public class BuildingClass : Itower, IholyObelisk, 
+    public class BuildingClass : Itower, IholyObelisk, Ifarm
     {
         int damage;
         int hitPoints;
@@ -34,6 +34,11 @@ namespace Laboratories320.Tikhonov.Strategy_game
         public void heal_ally(IbaseUnit unit)
         {
             unit.HitPoints += this.damage;
+        }
+
+        public void produceCrops()
+        {
+            Console.WriteLine("Producing Crops");
         }
     }
 }

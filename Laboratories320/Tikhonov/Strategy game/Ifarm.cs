@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Laboratories320.Tikhonov.Strategy_game
 {
-    interface Ifarm
+    interface Ifarm : IbaseUnit
     {
         void produceCrops();
     }

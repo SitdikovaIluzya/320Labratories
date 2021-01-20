@@ -12,7 +12,6 @@ namespace Laboratories320
 
             Massiv.List();
             
-            Massiv.();
 
 
         }

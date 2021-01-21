@@ -8,8 +8,6 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            Tasks t = new Tasks();
-            t.Start();
         }
     }
 }

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject>Laboratories320.Program</StartupObject>
   </PropertyGroup>
 
 </Project>

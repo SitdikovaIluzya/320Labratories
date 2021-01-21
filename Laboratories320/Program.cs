@@ -1,6 +1,7 @@
 ﻿using Laboratories320.Hamatullin._1praktik;
 using Laboratories320.Hamatullin._2praktik;
 using Laboratories320.Hamatullin._3praktik;
+using Laboratories320.Hamatullin._4praktik;
 using System;
 
 namespace Laboratories320
@@ -9,7 +10,7 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            ManyThread.StartThread();
+            ManyTask.Start();
         }
     }
 }

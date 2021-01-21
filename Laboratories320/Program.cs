@@ -2,6 +2,7 @@
 using System.Threading;
 using Laboratories320.Lab2;
 using Laboratories320.Lab3;
+using Laboratories320.Lab4;
 
 namespace Laboratories320
 {
@@ -14,13 +15,16 @@ namespace Laboratories320
             //int[] arr = new int[10];
             //foreach (var item in arr)
             //{
-                //arr[1] = rnd.Next(-10, 20);
+            //arr[1] = rnd.Next(-10, 20);
             //}
             //Threading th = new Threading(arr);
             //th.Start();
 
-            Threading2 thr = new Threading2();
-            thr.Start();
+            //Threading2 thr = new Threading2();
+            //thr.Start();
+
+            Tasking t1 = new Tasking();
+            t1.Start();
 
             
         }

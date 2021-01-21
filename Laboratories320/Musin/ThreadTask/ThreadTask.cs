@@ -13,18 +13,19 @@ namespace Laboratories320.Musin.ThreadTask
 
         public static void Start()
         {
-            Task task1 = new Task(() => Generate());
-            Task task2 = new Task(() => Summ());
+            Task task1 = new Task(() => Generator());
+            Task task2 = new Task(() => Sum());
             task1.Start();
             task1.Wait();
             task2.Start();
         }
-        public static void Generate()
+
+        public static void Generator()
         {
             Random rnd = new Random();
             for (int i = 0; i < array1.Length; i++)
             {
-                array1[i] = rnd.Next(1,10);
+                array1[i] = rnd.Next(1, 9);
                 Console.Write(array1[i] + " ");
             }
 
@@ -32,13 +33,13 @@ namespace Laboratories320.Musin.ThreadTask
 
             for (int i = 0; i < array2.Length; i++)
             {
-                array2[i] = rnd.Next(1,10);
-                Console.Write(array1[i] + " ");
+                array2[i] = rnd.Next(1, 9);
+                Console.Write(array2[i] + " ");
             }
             Console.WriteLine();
         }
 
-        public static void Summ()
+        public static void Sum()
         {
             for (int i = 0; i < result.Length; i++)
             {

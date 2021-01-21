@@ -3,6 +3,7 @@ using System;
 using System.Threading;
 using Laboratories320.Volkov.ThreadLocker;
 using Laboratories320.Volkov.Tasks;
+using Laboratories320.Volkov.TasksPractice2;
 
 namespace Laboratories320
 {
@@ -10,7 +11,7 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            TaskPractice.Work();
+            TaskPractice2.Work();
         }
         
     }

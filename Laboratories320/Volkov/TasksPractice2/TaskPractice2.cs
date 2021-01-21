@@ -37,17 +37,16 @@ namespace Laboratories320.Volkov.TasksPractice2
         static void FindEvenNumbers()
         {
             digit = product.ToString();
+            string even = "";
             Console.Write("Четные числа: ");
             for (int i = 0; i < digit.Length; i++)
             {
-                if (product % 2 == 0)
+                if (digit[i] % 2 == 0)
                 {
-                    evendigit = product % 2;
-                    product = product / 10;
+                    even += digit[i] + " ";
                 }
-                else product = product / 10;
             }
-            Console.WriteLine(evendigit);
+            Console.Write(even);
         }
 
         public static void Work()

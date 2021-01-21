@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Laboratories320.Saifetdinov.Prac5
 {
-    static class ContinuationTasks
+    static class MethodsArray
     {
-
         static int[] array = new int[20];
+        static int multiplication = 1;
         public static void GenerationElementsArray()
         {
             Random random = new Random();
@@ -18,10 +18,16 @@ namespace Laboratories320.Saifetdinov.Prac5
         }
         public static void Multication()
         {
+            Console.WriteLine("Multication");
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] *= array[i];
+                multiplication *= array[i];
             }
+            Console.WriteLine(multiplication);
+        }
+        public static void ParityNumber()
+        {
+            multiplication
         }
     }
 }

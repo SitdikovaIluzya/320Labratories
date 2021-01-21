@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Laboratories320
+namespace Laboratories320.Saifetdinov.Prac5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Start the second practic");
-            Console.WriteLine();
+            Console.WriteLine("");
+            MethodsArray.Multication();
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Laboratories320.Dyubanov.Threading
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    Console.WriteLine(i + 1 + " A = " + arrA[i]);
+                    Console.WriteLine(i + " A = " + arrA[i]);
                     Console.WriteLine(i + " B = " + arrB[i]);
                     Console.WriteLine(i + " Sum = " + arrSum[i]);
                 }

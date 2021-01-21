@@ -36,18 +36,18 @@ namespace Laboratories320
                 prod *= array[i];
             }
             Console.WriteLine("Произведение = " + prod);
-            Thread.Sleep(1000);
         }
 
         static void EvenDigits(Task t)
         {
-            char[] chars = prod.ToString().ToCharArray();
+            string chars = prod.ToString();
             List<int> result = new List<int> { };
-            foreach (var item in chars)
+            for(int i = 0; i < chars.Length; i++)
             {
-                if (Convert.ToInt32(item) % 2 == 0)
+                int a = Convert.ToInt32(new string(chars[i], 1));
+                if (a % 2 == 0)
                 {
-                    result.Add(Convert.ToInt32(item));
+                    result.Add(a);
                 }
             }
             Console.WriteLine("Цифры = " + String.Join(", ", result));

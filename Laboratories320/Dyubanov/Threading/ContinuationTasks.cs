@@ -9,7 +9,7 @@ namespace Laboratories320.Dyubanov.Threading
     class ContinuationTasks
     {
         static int[] arr = new int[20];
-        static int product = 1;
+        static long product = 1;
 
         public void Start()
         {
@@ -24,7 +24,7 @@ namespace Laboratories320.Dyubanov.Threading
             for(int i = 0; i < arr.Length; i++)
             {
                 Random rnd = new Random();
-                arr[i] = rnd.Next(1, 20);
+                arr[i] = rnd.Next(1, 10);
                 Console.WriteLine(i + " " + arr[i]);
             }
         }

@@ -8,7 +8,8 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-
+            ContinuationTasks c = new ContinuationTasks();
+            c.Start();
         }
     }
 }

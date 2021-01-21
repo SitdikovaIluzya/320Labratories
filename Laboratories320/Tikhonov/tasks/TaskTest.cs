@@ -15,25 +15,16 @@ namespace Laboratories320.Tikhonov.tasks
         private static int[] FinalArray = new int[10];
         public static void tasks()
         {
-            Task taskArrGen = Task.Factory.StartNew(() =>      // внешняя задача
+            Task taskArrGen = Task.Factory.StartNew(() =>      
             {
                 arrGen();
-                Task taskSumOfElements = Task.Factory.StartNew(() =>  // вложенная задача
+                Task taskSumOfElements = Task.Factory.StartNew(() =>
                 {
                     sumOfElements();
                 }, TaskCreationOptions.AttachedToParent);
             });
             taskArrGen.Wait();
         }
-
-
-
-
-
-
-
-
-
         private static void sumOfElements()
         {
 

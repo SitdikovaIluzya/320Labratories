@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace Laboratories320.Tikhonov.tasks 
+namespace Laboratories320.Tikhonov
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Tasks.tasks();
         }
     }
 }

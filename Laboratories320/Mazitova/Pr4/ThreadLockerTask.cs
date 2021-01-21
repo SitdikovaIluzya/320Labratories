@@ -54,9 +54,14 @@ namespace Laboratories320.Mazitova.Pr4
             Task GetArr = new Task(GetArray);
             Task SummaT = new Task(Summa);
 
-            GetArr.Wait();
+            
+            
+          
+            Task.Run(() => Summa());
+            Task.Run(() => GetArray());
             SummaT.Wait();
-           
+
+
         }
 
         public void Summa()

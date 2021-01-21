@@ -56,8 +56,7 @@ namespace Laboratories320.Lab4
 
         public void Sum()
         {
-            lock (locker)
-            {
+            
                 for (int i = 0; i < array1.Length && i < array2.Length; i++)
                 {
                     array[i] = array1[1] + array2[i];
@@ -67,7 +66,7 @@ namespace Laboratories320.Lab4
                 {
                     Console.WriteLine(item + " ");
                 }
-            }
+            
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Laboratories320.ПРактика2;
 using System;
-
+using System.Threading.Tasks;
 namespace Laboratories320
 {
     class Program
@@ -11,9 +11,8 @@ namespace Laboratories320
             Console.WriteLine();
 
             Massiv.List();
+
             
-
-
         }
     }
 }

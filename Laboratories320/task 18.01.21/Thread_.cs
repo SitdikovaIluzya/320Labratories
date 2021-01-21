@@ -8,7 +8,7 @@ namespace Laboratories320.task_18._01._21
     class Thread_
     {
         static int[] array = { 1, 2, 3, 4, 6, 7, 8, 9, 0 };
-        static void Main()
+        static void ThreadMain()
         {
             Thread t1 = new Thread(Max);
             Thread t2 = new Thread(Sum);

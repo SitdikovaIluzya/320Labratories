@@ -11,7 +11,7 @@ namespace Laboratories320.task_19._01._21
         static int[] array_2 = new int[10];
         static int[] array_3 = new int[10];
         static object locker = new object();
-        static void Main()
+        static void ThreadLockMain()
         {
             Thread th1 = new Thread(Random_Ar);
             Thread th2 = new Thread(Sum);

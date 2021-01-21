@@ -10,7 +10,22 @@ namespace Laboratories320
     {
         static void Main(string[] args)
         {
-            ThTask.Tasks();
+            int[] numbers = new int[20];
+            int result = 1;
+
+            Random rnd = new Random();
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = rnd.Next(1, 5);
+                Console.Write(numbers[i] + " ");
+            }
+            Console.WriteLine();
+            
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                result *= numbers[i];
+            }
+            Console.Write(result);
         }
     }
 }

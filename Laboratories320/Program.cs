@@ -1,4 +1,5 @@
 ﻿using Laboratories320.Mazitova.Pr3;
+using Laboratories320.Mazitova.Pr4;
 using System;
 
 namespace Laboratories320
@@ -12,6 +13,9 @@ namespace Laboratories320
 
             ThreadLocker thr = new ThreadLocker();
             thr.Start();
+
+            ThreadLockerTask task = new ThreadLockerTask();
+            task.Start();
 
         }
     }

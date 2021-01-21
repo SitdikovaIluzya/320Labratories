@@ -52,7 +52,6 @@ namespace Laboratories320.Shigapov.Task1
             task1.Start();
             task1.Wait();
 
-
             Console.WriteLine("[{0}]", string.Join(", ", array1));
             Console.WriteLine("[{0}]", string.Join(", ", array2));
             Console.WriteLine("[{0}]", string.Join(", ", array3));

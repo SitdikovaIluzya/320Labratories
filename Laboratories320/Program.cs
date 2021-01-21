@@ -12,7 +12,8 @@ namespace Laboratories320
         {
             //Thread1.Thread_Main();
             //Thread_lock_prog.Thread_lock_Main();
-            Tpl.tpl();
+            //Tpl.tpl();
+            TplTask2.Start();
             
         }
     }

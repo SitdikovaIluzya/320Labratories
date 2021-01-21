@@ -52,7 +52,8 @@ namespace Laboratories320.Tikhonov.Strategy_game
 
             public void carry()
             {
-                System.Console.WriteLine("carring")            }
+                System.Console.WriteLine("carring");     
+            }
         }
         
     }

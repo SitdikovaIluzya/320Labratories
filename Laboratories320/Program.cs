@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 using Laboratories320.threads;
 
 
@@ -11,20 +12,18 @@ namespace Laboratories320
         static int[] arr1 = new int[10];
         static int[] arr2 = new int[10];
         static int[] arr3 = new int[10];
-        static object locker = new object();
+        
         static void Main(string[] args)
         {
 
-            Thread th1 = new Thread(Random_Ar);
-            th1.Start();
-            Thread th2 = new Thread(Sum);
-            th2.Start();
-
+            Task task1 =  Task.Run(()=>Random_Ar());
+            task1.Wait();
+            Task task2 = new Task(()=>Sum());
+            task2.Start();
         }
         static void Random_Ar()
         {
-            lock (locker)
-            {
+            
                 Random rnd = new Random();
                 for (int i = 0; i < 10; i++)
                 {
@@ -35,7 +34,7 @@ namespace Laboratories320
                 {
                     Console.WriteLine(arr1[i] + "," + arr2[i]);
                 }
-            }
+            
         }
 
         static void Sum()
@@ -46,7 +45,7 @@ namespace Laboratories320
             }
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(arr3[i]);
+                Console.WriteLine("Сумма: "+arr3[i]);
             }
         }
     }

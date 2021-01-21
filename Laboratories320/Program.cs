@@ -6,8 +6,7 @@ namespace Laboratories320.Saifetdinov.Prac5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
-            MethodsArray.Multication();
+            Taskings.Task();
         }
     }
 }

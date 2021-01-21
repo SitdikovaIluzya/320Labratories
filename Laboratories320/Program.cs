@@ -3,6 +3,7 @@ using System.Threading;
 using Laboratories320.Lab2;
 using Laboratories320.Lab3;
 using Laboratories320.Lab4;
+using Laboratories320.Lab5;
 
 namespace Laboratories320
 {
@@ -23,8 +24,11 @@ namespace Laboratories320
             //Threading2 thr = new Threading2();
             //thr.Start();
 
-            Tasking t1 = new Tasking();
-            t1.Start();
+            //Tasking t1 = new Tasking();
+            //t1.Start();
+            Tasking2 task = new Tasking2();
+            task.Start();
+
 
             
         }

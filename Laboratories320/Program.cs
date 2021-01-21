@@ -2,6 +2,7 @@
 using Laboratories320.Seydametov.Threading;
 using System.Threading;
 using System;
+using Laboratories320.Seydametov.TPL;
 
 namespace Laboratories320
 {
@@ -10,7 +11,8 @@ namespace Laboratories320
         static void Main(string[] args)
         {
             //Thread1.Thread_Main();
-            Thread_lock_prog.Thread_lock_Main(); 
+            //Thread_lock_prog.Thread_lock_Main();
+            Tpl.tpl();
             
         }
     }

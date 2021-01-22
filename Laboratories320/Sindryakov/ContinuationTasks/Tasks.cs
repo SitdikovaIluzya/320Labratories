@@ -7,16 +7,18 @@ namespace Laboratories320.Sindryakov.ContinuationTasks
 {
     class Tasks
     {
-
+        // практика 5, переделка
         static int[] numbers = new int[20];
         //static int[] outcome = new int[10];
-        static int a = 5;
+        static int numeric = 1;
         public static void Task()
         {
-            Task task1 = new Task(() => TotalСomposition());
-            //Task task1 = new Task(() => ParityCheck());
+            Task task1 = new Task(TotalСomposition);
+            Task task2 = new Task(ParityCheck);
+            Task task3 = task2.ContinueWith(check => ParityCheck());
             task1.Start();
-
+            task2.Start();
+            task3.Wait();
 
         }
 
@@ -24,7 +26,7 @@ namespace Laboratories320.Sindryakov.ContinuationTasks
         {
             for (int i = 0; i < numbers.Length; i++)
             {
-                a *= numbers[i];
+                numeric *= numbers[i];
                 Console.WriteLine("Произведение элементов массива: ");
                 Console.Write(numbers[i] + " ");
                 Console.WriteLine();
@@ -36,10 +38,9 @@ namespace Laboratories320.Sindryakov.ContinuationTasks
         {
             for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i] % 10 == 0)
+                if (numbers[i] % 2 == 0 && numbers[i] != 0)
                 {
-
-                    //a++;
+                    Console.WriteLine(numbers[i]);
                 }
             }
         }
@@ -47,11 +48,10 @@ namespace Laboratories320.Sindryakov.ContinuationTasks
 
         public static void Transform() //генерируем
         {
-
             Random rnd = new Random();
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = rnd.Next(10, 20);
+                numbers[i] = rnd.Next(-10, 100);
                 Console.WriteLine("Генерирование значений - ");
                 Console.Write(numbers[i] + " ");
             }

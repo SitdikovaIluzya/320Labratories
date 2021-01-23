@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Laboratories320.Smirnov.ContinuationTask_5_
 {
@@ -9,37 +10,53 @@ namespace Laboratories320.Smirnov.ContinuationTask_5_
         //найти произведение всех элементов,
         //и получите только четные цифры из результата.
         //Создайте правильную последовательность задач продолжения.
-        int[] arr = new int[20];
-        int product = 1;
+        static int[] arr = new int[20];
+        static int product = 1;
 
-        void Generate()
+        public static void Begin()
+        {
+            Task taskFillArray = new Task(Generate);
+            taskFillArray.Start();
+            taskFillArray.Wait();
+            Task prArr = new Task(Product);
+            prArr.Start();
+            prArr.Wait();
+            Task findEven = new Task(Even);
+            findEven.Start();
+            findEven.Wait();
+        }
+        static void Generate()
         {
             Random random = new Random();
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = random.Next(-50, 50);
+                arr[i] = random.Next(-10, 10);
+                Console.Write(arr[i]+ " ");
             }
+            Console.WriteLine();
         }
-        void Product()
+
+        static void Product()
         {
             for (int i = 0; i < arr.Length; i++)
             {
                 product *= arr[i];
             }
+            Console.WriteLine("Произведение: " + product);
         }
-        void Even()
+
+        static void Even()
         {
-            string emp = "";
-            while (product != 0)
+            string even = "";
+            string emp = product.ToString();
+            for (int i = 0; i < emp.Length; i++)
             {
-                if ((product % 10) % 2 == 0)
+                if (emp[i] % 2 == 0)
                 {
-                    emp += product;
+                    even += emp[i] + " ";
                 }
-                product = product / 10;
             }
-            Console.WriteLine("Количество четных цыфр: {0}", product);
-            Console.ReadKey();
-        } 
+            Console.Write("Четные цифры: " + even);
+        }
     }
 }

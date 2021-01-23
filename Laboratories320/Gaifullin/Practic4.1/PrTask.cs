@@ -6,48 +6,33 @@ using System.Threading;
 
 namespace Laboratories320.Gaifullin
 {
+    //Продолжение 4 практики
     class PrTask
     {
-        public static int[] array1 = new int[20];
-        public static int[] array2 = new int[20];
-        public static int[] array3 = new int[20];
-
-        static object Multiplication = new object();
-        static object Generator = new object();
-
-        public static void ThTasks()
+        public static int Composit = 1;
+        public static void Сomposition(int[] array)
         {
-            Task task1 = new Task(() => Generatorr());
-            Task task2 = Task.Run(() => Multiplicationn());
-            task1.Start();
-            task2.Wait();
-            Console.WriteLine("[{0}]", string.Join(", ", array1));
-            Console.WriteLine("[{0}]", string.Join(", ", array2));
-            Console.WriteLine("[{0}]", string.Join(", ", array3));
-        }
-
-        public static void Multiplicationn()
-        {
-
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 20; i++)
             {
-                array3[i] = array1[i] * array2[i];
+                Composit = Composit * array[i];
             }
-            Console.WriteLine("Multiplicationn:");
+            Console.WriteLine("Итог умножения: " + Composit);
+
         }
-        public static void Generatorr()
+
+        public static void Even()
         {
-            Random rnd = new Random();
-            for (int i = 0; i < 5; i++)
+            string comp = Composit.ToString();
+            string EvenDigits = "";
+            for (int i = 0; i < comp.Length; i++)
             {
-                array1[i] = rnd.Next(-10, 10);
-                array2[i] = rnd.Next(-10, 10);
+                if (comp[i] % 2 == 0)
+                {
+                    EvenDigits += comp[i];
+                }
             }
-            Console.WriteLine("Generating:");
+            Console.WriteLine("Четные числа: " + EvenDigits);
 
         }
-        
-
-
     }
 }

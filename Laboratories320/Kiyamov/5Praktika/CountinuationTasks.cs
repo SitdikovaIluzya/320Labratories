@@ -11,7 +11,7 @@ namespace Laboratories320.Kiyamov._5Praktika
 
         static int[] Massive = new int[20];
         public static int result = 1;
-        
+
         public static void Start()
         {
             Task task1 = Task.Run(() => MassiveGenerate());
@@ -25,7 +25,7 @@ namespace Laboratories320.Kiyamov._5Praktika
 
         public static void MassiveGenerate()
         {
-    {
+            {
                 Random rnd = new Random();
                 for (int i = 0; i < Massive.Length; i++)
                 {
@@ -34,38 +34,42 @@ namespace Laboratories320.Kiyamov._5Praktika
                 }
                 Console.WriteLine("[{0}]", string.Join(", ", Massive));
             }
-        
+
         }
 
         public static void Product()
         {
 
-      
+
             for (int i = 0; i < Massive.GetLength(0); i++)
             {
                 result *= Massive[i];
             }
             Console.WriteLine("Произведение = {0}", result);
-            Console.ReadKey();
+            
         }
-        
-        
-             public static void EvenDigits()
-        {    int c = 1;
-            for (int i = 0; i <= result.Length; i++)
-            {
-                if ((result[i] % 2) == 0)
-                {
-                    c = result[i];
-                    Console.WriteLine("Even digits: " + result);
 
+
+        public static void EvenDigits()
+        {
+            {
+                string Chetnie = "";
+                string Mars = result.ToString();
+                for (int i = 0; i < Mars.Length; i++)
+                {
+                    if (Mars[i] % 2 == 0)
+                    {
+                        Chetnie += Mars[i] + " ";
+                    }
                 }
+                Console.Write("Четные цифры: " + Chetnie);
+
+
             }
         }
 
-
     }
 
-    }
+}
 
 

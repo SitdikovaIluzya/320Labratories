@@ -40,7 +40,7 @@ namespace Laboratories320.Tikhonov.ContinuationTasks
             {
                 if ((i - '0')%2 == 0)
                 {
-                    Console.WriteLine(i);
+                    Console.Write(i);
                 }
             }
         }

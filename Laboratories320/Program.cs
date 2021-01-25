@@ -6,6 +6,7 @@ namespace Laboratories320.Tikhonov
     {
         static void Main(string[] args)
         {
+            ContinuationTasks.ContinuationTasksTest.Tasks();
         }
     }
 }

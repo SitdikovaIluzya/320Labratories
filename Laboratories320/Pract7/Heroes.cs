@@ -12,6 +12,7 @@ namespace Laboratories320.Pract7
     class Heroes
     {
         [BsonId(IdGenerator = typeof(StringObjectIdGenerator))]
+
         [BsonIgnoreIfDefault]
         public object HeroesId;
         [BsonIgnoreIfNull]
@@ -37,6 +38,42 @@ namespace Laboratories320.Pract7
             var database = client.GetDatabase("Moovi");
             var collection = database.GetCollection<Heroes>("Heroes");
             await collection.ReplaceOneAsync(heroes => heroes.HeroesName == heroesName, newHeroes);
+        }
+        public static async Task UpdateMany(string heroesName, int newHealth)
+        {
+            string connectionString = "mongodb://localhost";
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Moovi");
+            var collection = database.GetCollection<Heroes>("Heroes");
+            var update = Builders<Heroes>.Update.Set(heroes => heroes.Health, newHealth);
+            await collection.UpdateManyAsync(heroes => heroes.HeroesName == heroesName, update);
+        }
+        public static async Task DeleteMany(string heroesName, int newHealth)
+        {
+            string connectionString = "mongodb://localhost";
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Moovi");
+            var collection = database.GetCollection<Heroes>("Heroes");
+            var delete = Builders<Heroes>.Filter.Eq(heroes => heroes.Health, newHealth);
+            await collection.DeleteManyAsync(delete);
+        }
+        public static async Task Update(string heroesName, int newHealth)
+        {
+            string connectionString = "mongodb://localhost";
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Moovi");
+            var collection = database.GetCollection<Heroes>("Heroes");
+            var update = Builders<Heroes>.Update.Set(heroes => heroes.Health, newHealth);
+            await collection.UpdateOneAsync(heroes => heroes.HeroesName == heroesName, update);
+        }
+        public static async Task Delete(string heroesName, int newHealth)
+        {
+            string connectionString = "mongodb://localhost";
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase("Moovi");
+            var collection = database.GetCollection<Heroes>("Heroes");
+            var delete = Builders<Heroes>.Filter.Eq(heroes => heroes.Health, newHealth);
+            await collection.DeleteOneAsync(delete);
         }
     }
 
